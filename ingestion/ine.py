@@ -22,15 +22,22 @@ def _ine_request(table_id: str) -> list:
 def fetch_hotel_occupancy() -> pd.DataFrame:
     print("Downloading INE hotel occupancy data...")
 
+    # Load province names from CSV
     mapping_df = pd.read_csv(MAPPING_FILE)
     PROVINCIAS_INE = set(mapping_df["province_name"].tolist())
 
-    raw_data = _ine_request("2074")
-
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     raw_file = DATA_DIR / "hotel_occupancy_raw.json"
-    with open(raw_file, "w", encoding="utf-8") as f:
-        json.dump(raw_data, f, ensure_ascii=False, indent=2)
+
+    # Skip if already downloaded
+    if raw_file.exists():
+        print("Skipping INE download — file already exists")
+        with open(raw_file, encoding="utf-8") as f:
+            raw_data = json.load(f)
+    else:
+        raw_data = _ine_request("2074")
+        with open(raw_file, "w", encoding="utf-8") as f:
+            json.dump(raw_data, f, ensure_ascii=False, indent=2)
 
     rows = []
     for serie in raw_data:

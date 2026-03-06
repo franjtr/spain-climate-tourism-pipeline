@@ -13,7 +13,7 @@ def load_dataframe(df: pd.DataFrame, table_name: str) -> None:
     df.to_sql(
         name=table_name,
         con=engine,
-        if_exists="replace",  # Overwrites on each run — fine for raw tables
+        if_exists="replace",  
         index=False
     )
     print(f"Loaded {len(df)} rows into table '{table_name}'")
@@ -38,7 +38,6 @@ def load_ine() -> None:
 
 if __name__ == "__main__":
     # Test with 3 stations for now
-    # Will be replaced by full province list in main_ingest.py
     stations = ["3195", "8414A", "2867"]
     
     load_aemet(2023, stations)
