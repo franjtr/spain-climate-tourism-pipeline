@@ -1,0 +1,53 @@
+province_id,province_name,ccaa,station_id,station_name
+28,Madrid,Comunidad de Madrid,3195,Madrid Retiro
+8,Barcelona,Cataluña,0076,Barcelona Fabra
+46,Valencia,Comunidad Valenciana,8414A,Valencia Airport
+41,Sevilla,Andalucía,5783,Sevilla San Pablo
+50,Zaragoza,Aragón,9434,Zaragoza Airport
+29,Málaga,Andalucía,6155A,Málaga Airport
+30,Murcia,Región de Murcia,7178I,Murcia Alcantarilla
+7,"Balears, Illes",Illes Balears,B228,Palma de Mallorca Airport
+35,Las Palmas,Canarias,C029O,Las Palmas Airport
+48,Vizcaya,País Vasco,1082,Bilbao Airport
+3,Alicante,Comunidad Valenciana,8025,Alicante Airport
+14,Córdoba,Andalucía,5402,Córdoba Airport
+47,Valladolid,Castilla y León,2422,Valladolid Airport
+15,A Coruña,Galicia,1387,A Coruña
+33,Asturias,Asturias,1212E,Oviedo
+18,Granada,Andalucía,5514,Granada Airport
+20,Guipúzcoa,País Vasco,1024E,San Sebastián Igueldo
+39,Cantabria,Cantabria,1111,Santander Airport
+1,Alava,País Vasco,9091O,Vitoria Airport
+31,Navarra,Comunidad Foral de Navarra,9263D,Pamplona Airport
+26,"Rioja, La",La Rioja,9170,Logroño Agoncillo
+9,Burgos,Castilla y León,2331,Burgos Airport
+2,Albacete,Castilla-La Mancha,8175,Albacete Los Llanos
+12,Castellón,Comunidad Valenciana,8500A,Castellón
+6,Badajoz,Extremadura,4452,Badajoz Airport
+37,Salamanca,Castilla y León,2870,Salamanca Airport
+24,León,Castilla y León,2661,León Airport
+10,Cáceres,Extremadura,3469A,Cáceres
+21,Huelva,Andalucía,4605,Huelva
+4,Almería,Andalucía,6325O,Almería Airport
+13,Ciudad Real,Castilla-La Mancha,4121,Ciudad Real Airport
+19,Guadalajara,Castilla-La Mancha,3168C,Guadalajara
+16,Cuenca,Castilla-La Mancha,8096,Cuenca
+45,Toledo,Castilla-La Mancha,3260B,Toledo
+23,Jaén,Andalucía,5270B,Jaén
+11,Cádiz,Andalucía,5973,Jerez Airport
+44,Teruel,Aragón,8368U,Teruel
+22,Huesca,Aragón,9898,Huesca Monflorite
+25,Lleida,Cataluña,9771C,Lleida
+17,Girona,Cataluña,0367,Girona Airport
+43,Tarragona,Cataluña,0034X,Tarragona
+40,Segovia,Castilla y León,2465,Segovia
+5,Avila,Castilla y León,2444,Ávila
+42,Soria,Castilla y León,2030,Soria
+49,Zamora,Castilla y León,2614,Zamora
+34,Palencia,Castilla y León,2401,Palencia
+36,Pontevedra,Galicia,1484C,Vigo Airport
+32,Ourense,Galicia,1690A,Ourense
+27,Lugo,Galicia,1505,Lugo
+38,Santa Cruz Tenerife,Canarias,C447A,Tenerife Norte Airport
+51,Ceuta,Ceuta,5000C,Ceuta
+52,Melilla,Melilla,6000A,Melilla
