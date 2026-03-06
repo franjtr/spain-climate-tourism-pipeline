@@ -27,10 +27,10 @@ province_id,province_name,ccaa,station_id,station_name
 37,Salamanca,Castilla y León,2870,Salamanca Airport
 24,León,Castilla y León,2661,León Airport
 10,Cáceres,Extremadura,3469A,Cáceres
-21,Huelva,Andalucía,4605,Huelva
+21,Huelva,Andalucía,4642E,Huelva
 4,Almería,Andalucía,6325O,Almería Airport
 13,Ciudad Real,Castilla-La Mancha,4121,Ciudad Real Airport
-19,Guadalajara,Castilla-La Mancha,3168C,Guadalajara
+19,Guadalajara,Castilla-La Mancha,3168D,Guadalajara
 16,Cuenca,Castilla-La Mancha,8096,Cuenca
 45,Toledo,Castilla-La Mancha,3260B,Toledo
 23,Jaén,Andalucía,5270B,Jaén
@@ -44,7 +44,7 @@ province_id,province_name,ccaa,station_id,station_name
 5,Avila,Castilla y León,2444,Ávila
 42,Soria,Castilla y León,2030,Soria
 49,Zamora,Castilla y León,2614,Zamora
-34,Palencia,Castilla y León,2401,Palencia
+34,Palencia,Castilla y León,2401X,Palencia
 36,Pontevedra,Galicia,1484C,Vigo Airport
 32,Ourense,Galicia,1690A,Ourense
 27,Lugo,Galicia,1505,Lugo

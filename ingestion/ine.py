@@ -48,15 +48,18 @@ def fetch_hotel_occupancy() -> pd.DataFrame:
         if not provincia:
             continue
 
-        # Only Viajeros.Total and Pernoctaciones.Total
-        if "Viajeros. Total." not in name and "Pernoctaciones. Total." not in name:
+        # Only Viajeros/Pernoctaciones Total — handles both INE formats
+        is_viajeros = "Viajeros. Total." in name or "Viajero. Total categorías. Total." in name
+        is_pernoctaciones = "Pernoctaciones. Total." in name or "Pernoctaciones. Total categorías. Total." in name
+        
+        if not is_viajeros and not is_pernoctaciones:
             continue
 
         for dato in serie.get("Data", []):
             rows.append({
                 "serie_name": name,
                 "provincia": provincia,
-                "metric": "viajeros" if "Viajeros" in name else "pernoctaciones",
+                "metric": "viajeros" if is_viajeros else "pernoctaciones",
                 "year": dato.get("Anyo"),
                 "month": dato.get("T3_Periodo"),
                 "date": dato.get("Fecha"),

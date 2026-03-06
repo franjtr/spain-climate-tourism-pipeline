@@ -22,8 +22,9 @@ def run_pipeline():
     print(f"Found {len(stations)} stations to download")
 
     # Run ingestion
-    for year in YEARS:
-        load_aemet(year, stations)
+    for i, year in enumerate(YEARS):
+        load_aemet(year, stations, first_load=(i == 0))
+
     load_ine()
 
     print("\nPipeline completed successfully.")
