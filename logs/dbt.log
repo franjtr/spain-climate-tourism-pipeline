@@ -1,0 +1,59 @@
+[0m11:30:33.183245 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235AFD1B380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235B115FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235B115F9D0>]}
+
+
+============================== 11:30:33.190240 | b3c1ce85-e246-4bdf-8239-a6bdc0bef664 ==============================
+[0m11:30:33.190240 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:30:33.191246 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'invocation_command': 'dbt init dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:30:53.167447 [debug] [MainThread]: Starter project path: C:\DataAnalyst\spain-climate-tourism-pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m11:30:53.220636 [info ] [MainThread]: 
+Your new dbt project "spain_weather" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:30:53.221553 [info ] [MainThread]: Setting up your profile.
+[0m11:33:04.767960 [info ] [MainThread]: Profile spain_weather written to C:\Users\Francisco\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:33:04.769848 [debug] [MainThread]: Command `dbt init` succeeded at 11:33:04.769663 after 151.89 seconds
+[0m11:33:04.770416 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235B122E3F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235B25F05F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235B0FDBCE0>]}
+[0m11:33:04.771005 [debug] [MainThread]: Flushing usage events
+[0m11:33:05.746553 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:44:20.667803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001699CC2B380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001699E06FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001699E06F9D0>]}
+
+
+============================== 12:44:20.678496 | 20a7852e-00d2-4d0d-aadf-864ef99c8fef ==============================
+[0m12:44:20.678496 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:44:20.679422 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:44:20.680244 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\DataAnalyst\spain-climate-tourism-pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:44:20.681863 [debug] [MainThread]: Command `dbt seed` failed at 12:44:20.681691 after 0.35 seconds
+[0m12:44:20.682420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001699DF62EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001699E0F4050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001699DEEB240>]}
+[0m12:44:20.683000 [debug] [MainThread]: Flushing usage events
+[0m12:44:21.661644 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:45:42.142980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211F339B380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211F47EF890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211F47EFD90>]}
+
+
+============================== 12:45:42.150088 | fce57b5e-29a7-4b8e-815c-4cac17a89343 ==============================
+[0m12:45:42.150088 [info ] [MainThread]: Running with dbt=1.11.7
+[0m12:45:42.151002 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:45:42.151749 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\DataAnalyst\spain-climate-tourism-pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:45:42.153394 [debug] [MainThread]: Command `dbt seed` failed at 12:45:42.153225 after 0.30 seconds
+[0m12:45:42.153947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211F46E2EA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211F487C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000211F466B240>]}
+[0m12:45:42.154519 [debug] [MainThread]: Flushing usage events
+[0m12:45:43.088210 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,5 +1,10 @@
-with source as (
-    select * from {{ source('public', 'raw_ine_tourism') }}
+
+  create view "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_ine_tourism"
 ),
 
 cleaned as (
@@ -21,3 +26,4 @@ cleaned as (
 )
 
 select * from cleaned
+  );

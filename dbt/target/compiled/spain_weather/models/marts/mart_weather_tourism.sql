@@ -1,13 +1,13 @@
 with weather as (
-    select * from {{ ref('stg_aemet') }}
+    select * from "spain_weather_tourism"."public"."stg_aemet"
 ),
 
 tourism as (
-    select * from {{ ref('stg_ine_tourism') }}
+    select * from "spain_weather_tourism"."public"."stg_ine_tourism"
 ),
 
 provinces as (
-    select * from {{ ref('province_mapping') }}
+    select * from "spain_weather_tourism"."public"."province_mapping"
 ),
 
 -- Join weather with province mapping to get province names

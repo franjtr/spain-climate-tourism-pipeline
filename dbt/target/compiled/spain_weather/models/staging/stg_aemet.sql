@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('public', 'raw_aemet_climate') }}
+    select * from "spain_weather_tourism"."public"."raw_aemet_climate"
 ),
 
 cleaned as (

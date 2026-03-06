@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_ine_tourism
+    description: "Cleaned INE hotel occupancy data - travellers and overnight stays by province and month"
+    columns:
+      - name: province_name
+        description: "Spanish province name matching province_mapping"
+        tests:
+          - not_null
+
+      - name: metric
+        description: "Type of metric: viajeros or pernoctaciones"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['viajeros', 'pernoctaciones']
+
+      - name: year
+        description: "Year of the record"
+        tests:
+          - not_null
+
+      - name: month
+        description: "Month of the record (1-12)"
+        tests:
+          - not_null
+
+      - name: value
+        description: "Numeric value of the metric"
+        tests:
+          - not_null

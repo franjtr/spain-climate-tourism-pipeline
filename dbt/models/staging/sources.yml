@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: public
+    database: spain_weather_tourism
+    schema: public
+    tables:
+      - name: raw_aemet_climate
+      - name: raw_ine_tourism
+      - name: province_mapping

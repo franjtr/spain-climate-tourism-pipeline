@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_aemet
+    description: "Cleaned AEMET climate data - one row per station per month"
+    columns:
+      - name: station_id
+        tests:
+          - not_null
+      - name: year
+        tests:
+          - not_null
+      - name: month
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]

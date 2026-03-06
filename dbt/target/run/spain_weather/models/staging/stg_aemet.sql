@@ -1,5 +1,10 @@
-with source as (
-    select * from {{ source('public', 'raw_aemet_climate') }}
+
+  create view "spain_weather_tourism"."public"."stg_aemet__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_aemet_climate"
 ),
 
 cleaned as (
@@ -35,3 +40,4 @@ cleaned as (
 )
 
 select * from cleaned
+  );

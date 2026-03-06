@@ -1,5 +1,5 @@
 with source as (
-    select * from {{ source('public', 'raw_ine_tourism') }}
+    select * from "spain_weather_tourism"."public"."raw_ine_tourism"
 ),
 
 cleaned as (

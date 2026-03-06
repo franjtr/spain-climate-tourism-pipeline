@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: mart_weather_tourism
+    description: "Final table joining AEMET weather data with INE hotel occupancy by province and month"
+    columns:
+      - name: province_name
+        description: "Spanish province name"
+        tests:
+          - not_null
+
+      - name: year
+        description: "Year of the record"
+        tests:
+          - not_null
+
+      - name: month
+        description: "Month of the record (1-12)"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+      - name: avg_temp
+        description: "Monthly average temperature in Celsius"
+
+      - name: tourists
+        description: "Number of hotel travellers"
+
+      - name: overnight_stays
+        description: "Number of overnight hotel stays"
