@@ -96,8 +96,7 @@ spain-climate-tourism-pipeline/
 │   ├── models/
 │   │    ├── staging/                     # Raw data cleaning
 │   │    └── marts/                       # Final model
-│   ├── seeds/                            # Static mapping (province_mapping.csv)
-│   └── target/                           # Compiled SQL (git-ignored)
+│   └── seeds/                            # Static mapping (province_mapping.csv)
 ├── docs/images                           # Dashboard Screenshots
 ├── export_data.py                        # SQL to Parquet exporter
 ├── docker-compose.yml                    # PostgreSQL container
