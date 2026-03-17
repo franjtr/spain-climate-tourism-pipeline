@@ -362,13 +362,17 @@ with tab2:
                 | Component | What it shows | Example |
                 |-----------|---------------|---------|
                 | **Observed** | Raw data exactly as recorded | Actual tourist counts per month |
-                | **Trend** | Underlying growth/decline over years | Tourism growing 5% annually until COVID |
-                | **Seasonality** | Predictable annual pattern that repeats | August always +50%, January always -30% |
-                | **Residuals** | Anomalies unexplained by trend/season | COVID crash in April 2020, special events |
-                
+                | **Trend** | Underlying growth/decline over years | Recovery growth after COVID (2022-2025) |
+                | **Seasonality** | Predictable annual pattern that repeats | Spanish tourism consistently peaks in summer months across most provinces |
+                | **Residuals** | Anomalies unexplained by trend/season | COVID crash (2020), strikes, special events |
+
                 ---
-                
-                **Key insight:** Large residuals indicate unexpected events that weren't just normal seasonality.
+
+                **Data coverage:** 2019-2025. The COVID period (2020-2021) appears clearly
+                as large negative residuals across all provinces.
+
+                **Key insight:** Large residuals indicate unexpected events that weren't 
+                just normal seasonality.
                 """)
             
         except Exception as e:
