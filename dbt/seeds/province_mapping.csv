@@ -16,7 +16,7 @@ province_id,province_name,ccaa,station_id,station_name
 33,Asturias,Asturias,1212E,Oviedo
 18,Granada,Andalucía,5514,Granada Airport
 20,Guipúzcoa,País Vasco,1024E,San Sebastián Igueldo
-39,Cantabria,Cantabria,1111,Santander Airport
+39,Cantabria,Cantabria,1109,Santander 
 1,Alava,País Vasco,9091O,Vitoria Airport
 31,Navarra,Comunidad Foral de Navarra,9263D,Pamplona Airport
 26,"Rioja, La",La Rioja,9170,Logroño Agoncillo
@@ -48,6 +48,6 @@ province_id,province_name,ccaa,station_id,station_name
 36,Pontevedra,Galicia,1484C,Vigo Airport
 32,Ourense,Galicia,1690A,Ourense
 27,Lugo,Galicia,1505,Lugo
-38,Santa Cruz Tenerife,Canarias,C447A,Tenerife Norte Airport
+38,Santa Cruz Tenerife,Canarias,C449C,Santa Cruz Tenerife
 51,Ceuta,Ceuta,5000C,Ceuta
 52,Melilla,Melilla,6000A,Melilla

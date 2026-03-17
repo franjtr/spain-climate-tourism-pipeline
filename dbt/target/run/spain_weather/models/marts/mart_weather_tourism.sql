@@ -27,16 +27,20 @@ weather_by_province as (
         p.ccaa,
         w.year,
         w.month,
-        w.avg_temp,
-        w.avg_max_temp,
-        w.avg_min_temp,
+        -- Imputación de temperatura media
+        coalesce(
+            w.avg_temp, 
+            avg(w.avg_temp) over(partition by p.province_name, w.month)
+        ) as avg_temp,
+        -- Imputación de máximas y mínimas (opcional, pero recomendado para consistencia)
+        coalesce(w.avg_max_temp, avg(w.avg_max_temp) over(partition by p.province_name, w.month)) as avg_max_temp,
+        coalesce(w.avg_min_temp, avg(w.avg_min_temp) over(partition by p.province_name, w.month)) as avg_min_temp,
         w.precipitation,
         w.sunshine_hours,
         w.sunny_days,
         w.cloudy_days,
         w.humidity,
         w.avg_wind
-
     from weather w
     inner join provinces p
         on w.station_id = p.station_id::text

@@ -7100,3 +7100,2454 @@ drop table if exists "spain_weather_tourism"."public"."mart_weather_tourism__dbt
 [0m18:18:41.323228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0383BDDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E0383BEED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E032869A90>]}
 [0m18:18:41.323790 [debug] [MainThread]: Flushing usage events
 [0m18:18:42.302545 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:02:49.474047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C30CEF380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C32143D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C321439D0>]}
+
+
+============================== 10:02:49.483738 | 1f1837c5-6014-4963-b6eb-dfa7f20fe662 ==============================
+[0m10:02:49.483738 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:02:49.484663 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\DataAnalyst\\spain-climate-tourism-pipeline\\dbt\\logs'}
+[0m10:02:49.971649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C31436060>]}
+[0m10:02:50.107744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C2F255480>]}
+[0m10:02:50.110174 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:02:50.807528 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:02:52.493896 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:02:52.494853 [debug] [MainThread]: Partial parsing: updated file: spain_weather://seeds\province_mapping.csv
+[0m10:02:53.026769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C33A49150>]}
+[0m10:02:53.193485 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:02:53.197321 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:02:53.257043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C337FBB60>]}
+[0m10:02:53.257759 [info ] [MainThread]: Found 3 models, 14 data tests, 1 seed, 3 sources, 464 macros
+[0m10:02:53.258402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C3375A190>]}
+[0m10:02:53.261500 [info ] [MainThread]: 
+[0m10:02:53.262144 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:02:53.262684 [info ] [MainThread]: 
+[0m10:02:53.263454 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:02:53.270128 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism'
+[0m10:02:56.895542 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism"
+[0m10:02:56.896222 [debug] [ThreadPool]: On list_spain_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:02:56.896760 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:02:56.936097 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.039 seconds
+[0m10:02:56.939041 [debug] [ThreadPool]: On list_spain_weather_tourism: Close
+[0m10:02:56.942470 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism_public'
+[0m10:02:56.954235 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism_public"
+[0m10:02:56.955072 [debug] [ThreadPool]: On list_spain_weather_tourism_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism_public"} */
+select
+      'spain_weather_tourism' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:02:56.955773 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:02:56.999957 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.044 seconds
+[0m10:02:57.002170 [debug] [ThreadPool]: On list_spain_weather_tourism_public: ROLLBACK
+[0m10:02:57.004439 [debug] [ThreadPool]: On list_spain_weather_tourism_public: Close
+[0m10:02:57.014775 [debug] [MainThread]: Using postgres connection "master"
+[0m10:02:57.015665 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:02:57.016348 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:02:57.066396 [debug] [MainThread]: SQL status: SELECT 2 in 0.050 seconds
+[0m10:02:57.069361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C33E83380>]}
+[0m10:02:57.070256 [debug] [MainThread]: On master: ROLLBACK
+[0m10:02:57.072623 [debug] [MainThread]: On master: COMMIT
+[0m10:02:57.073320 [debug] [MainThread]: Using postgres connection "master"
+[0m10:02:57.073810 [debug] [MainThread]: On master: COMMIT
+[0m10:02:57.077353 [debug] [MainThread]: SQL status: COMMIT in 0.003 seconds
+[0m10:02:57.078066 [debug] [MainThread]: On master: Close
+[0m10:02:57.089181 [debug] [Thread-1 (]: Began running node model.spain_weather.stg_aemet
+[0m10:02:57.090070 [debug] [Thread-2 (]: Began running node model.spain_weather.stg_ine_tourism
+[0m10:02:57.091188 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_aemet ................................... [RUN]
+[0m10:02:57.093919 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.spain_weather.stg_aemet'
+[0m10:02:57.092678 [info ] [Thread-2 (]: 2 of 3 START sql view model public.stg_ine_tourism ............................. [RUN]
+[0m10:02:57.095220 [debug] [Thread-1 (]: Began compiling node model.spain_weather.stg_aemet
+[0m10:02:57.096691 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.spain_weather.stg_ine_tourism'
+[0m10:02:57.113953 [debug] [Thread-1 (]: Writing injected SQL for node "model.spain_weather.stg_aemet"
+[0m10:02:57.114888 [debug] [Thread-2 (]: Began compiling node model.spain_weather.stg_ine_tourism
+[0m10:02:57.120143 [debug] [Thread-2 (]: Writing injected SQL for node "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.123029 [debug] [Thread-1 (]: Began executing node model.spain_weather.stg_aemet
+[0m10:02:57.155319 [debug] [Thread-2 (]: Began executing node model.spain_weather.stg_ine_tourism
+[0m10:02:57.196769 [debug] [Thread-2 (]: Writing runtime sql for node "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.201057 [debug] [Thread-1 (]: Writing runtime sql for node "model.spain_weather.stg_aemet"
+[0m10:02:57.203880 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.205351 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+
+  create view "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_ine_tourism"
+),
+
+cleaned as (
+    select
+        provincia                                          as province_name,
+        metric,
+        year::int                                          as year,
+        replace(month, 'M', '')::int                       as month,
+        value::numeric                                     as value,
+        extracted_at
+
+    from source
+    where
+        -- Remove null values marked as secret by INE
+        secret is null
+        and value is not null
+        -- Only 2019 onwards
+        and year::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:02:57.206169 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:02:57.206958 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:02:57.207800 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+
+  create view "spain_weather_tourism"."public"."stg_aemet__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_aemet_climate"
+),
+
+cleaned as (
+    select
+        indicativo                                    as station_id,
+        -- Split fecha "2023-9" into year and month
+        split_part(fecha, '-', 1)::int                as year,
+        split_part(fecha, '-', 2)::int                as month,
+        
+        -- Temperature
+        tm_mes::numeric                               as avg_temp,
+        tm_max::numeric                               as avg_max_temp,
+        tm_min::numeric                               as avg_min_temp,
+        
+        -- Precipitation and sunshine
+        p_mes::numeric                                as precipitation,
+        e::numeric                                    as sunshine_hours,
+        n_des::int                                    as sunny_days,
+        n_cub::int                                    as cloudy_days,
+        
+        -- Other
+        hr::numeric                                   as humidity,
+        w_med::numeric                                as avg_wind,
+        
+        extracted_at
+
+    from source
+    where
+        -- Remove annual summary rows (month 13)
+        split_part(fecha, '-', 2)::int between 1 and 12
+        -- Only 2019 onwards
+        and split_part(fecha, '-', 1)::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:02:57.208768 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:02:57.254345 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.047 seconds
+[0m10:02:57.255506 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.047 seconds
+[0m10:02:57.266083 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.272400 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:02:57.273611 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism" rename to "stg_ine_tourism__dbt_backup"
+[0m10:02:57.274618 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet" rename to "stg_aemet__dbt_backup"
+[0m10:02:57.280212 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.005 seconds
+[0m10:02:57.281278 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m10:02:57.286401 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.292298 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:02:57.293086 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp" rename to "stg_ine_tourism"
+[0m10:02:57.293749 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet__dbt_tmp" rename to "stg_aemet"
+[0m10:02:57.296876 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:02:57.297630 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m10:02:57.331629 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:02:57.334489 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:02:57.335306 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:02:57.336070 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.336945 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:02:57.337951 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:02:57.345824 [debug] [Thread-2 (]: SQL status: COMMIT in 0.007 seconds
+[0m10:02:57.346662 [debug] [Thread-1 (]: SQL status: COMMIT in 0.008 seconds
+[0m10:02:57.358186 [debug] [Thread-2 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup"
+[0m10:02:57.362647 [debug] [Thread-1 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_aemet__dbt_backup"
+[0m10:02:57.373718 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:02:57.375163 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:02:57.376068 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+drop view if exists "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup" cascade
+[0m10:02:57.376818 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+drop view if exists "spain_weather_tourism"."public"."stg_aemet__dbt_backup" cascade
+[0m10:02:57.386786 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.009 seconds
+[0m10:02:57.387758 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.010 seconds
+[0m10:02:57.392009 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: Close
+[0m10:02:57.394442 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: Close
+[0m10:02:57.398968 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C33FD0D10>]}
+[0m10:02:57.399872 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C33D75F40>]}
+[0m10:02:57.401381 [info ] [Thread-2 (]: 2 of 3 OK created sql view model public.stg_ine_tourism ........................ [[32mCREATE VIEW[0m in 0.30s]
+[0m10:02:57.404154 [debug] [Thread-2 (]: Finished running node model.spain_weather.stg_ine_tourism
+[0m10:02:57.402610 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_aemet .............................. [[32mCREATE VIEW[0m in 0.30s]
+[0m10:02:57.406045 [debug] [Thread-1 (]: Finished running node model.spain_weather.stg_aemet
+[0m10:02:57.407167 [debug] [Thread-3 (]: Began running node model.spain_weather.mart_weather_tourism
+[0m10:02:57.408178 [info ] [Thread-3 (]: 3 of 3 START sql table model public.mart_weather_tourism ....................... [RUN]
+[0m10:02:57.409326 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.spain_weather.mart_weather_tourism'
+[0m10:02:57.410042 [debug] [Thread-3 (]: Began compiling node model.spain_weather.mart_weather_tourism
+[0m10:02:57.415565 [debug] [Thread-3 (]: Writing injected SQL for node "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.417252 [debug] [Thread-3 (]: Began executing node model.spain_weather.mart_weather_tourism
+[0m10:02:57.462176 [debug] [Thread-3 (]: Writing runtime sql for node "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.463980 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.464848 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+
+  
+    
+
+  create  table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with weather as (
+    select * from "spain_weather_tourism"."public"."stg_aemet"
+),
+
+tourism as (
+    select * from "spain_weather_tourism"."public"."stg_ine_tourism"
+),
+
+provinces as (
+    select * from "spain_weather_tourism"."public"."province_mapping"
+),
+
+-- Join weather with province mapping to get province names
+weather_by_province as (
+    select
+        p.province_name,
+        p.ccaa,
+        w.year,
+        w.month,
+        w.avg_temp,
+        w.avg_max_temp,
+        w.avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind
+
+    from weather w
+    inner join provinces p
+        on w.station_id = p.station_id::text
+),
+
+-- Pivot tourism: one row per province/year/month with viajeros and pernoctaciones
+tourism_pivoted as (
+    select
+        province_name,
+        year,
+        month,
+        max(case when metric = 'viajeros' then value end)        as tourists,
+        max(case when metric = 'pernoctaciones' then value end)  as overnight_stays
+
+    from tourism
+    group by province_name, year, month
+),
+
+-- Final join
+final as (
+    select
+        w.province_name,
+        w.ccaa,
+        w.year,
+        w.month,
+        -- Weather
+        w.avg_temp,
+        w.avg_max_temp,
+        w.avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind,
+        -- Tourism
+        t.tourists,
+        t.overnight_stays,
+        -- Derived
+        round(t.overnight_stays / nullif(t.tourists, 0), 2)  as avg_stay_days
+
+    from weather_by_province w
+    left join tourism_pivoted t
+        on w.province_name = t.province_name
+        and w.year = t.year
+        and w.month = t.month
+)
+
+select * from final
+  );
+  
+[0m10:02:57.465605 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:02:57.666552 [debug] [Thread-3 (]: SQL status: SELECT 4284 in 0.201 seconds
+[0m10:02:57.677195 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.677898 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism" rename to "mart_weather_tourism__dbt_backup"
+[0m10:02:57.680432 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:02:57.685448 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.686129 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp" rename to "mart_weather_tourism"
+[0m10:02:57.688828 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:02:57.691648 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:02:57.692362 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.692932 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:02:57.709597 [debug] [Thread-3 (]: SQL status: COMMIT in 0.016 seconds
+[0m10:02:57.713412 [debug] [Thread-3 (]: Applying DROP to: "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup"
+[0m10:02:57.719897 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:02:57.720912 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+drop table if exists "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup" cascade
+[0m10:02:57.729873 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.008 seconds
+[0m10:02:57.732425 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: Close
+[0m10:02:57.733522 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1f1837c5-6014-4963-b6eb-dfa7f20fe662', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C33B8D310>]}
+[0m10:02:57.734584 [info ] [Thread-3 (]: 3 of 3 OK created sql table model public.mart_weather_tourism .................. [[32mSELECT 4284[0m in 0.32s]
+[0m10:02:57.735865 [debug] [Thread-3 (]: Finished running node model.spain_weather.mart_weather_tourism
+[0m10:02:57.738452 [debug] [MainThread]: On master: COMMIT
+[0m10:02:57.739095 [debug] [MainThread]: Using postgres connection "master"
+[0m10:02:57.739660 [debug] [MainThread]: On master: COMMIT
+[0m10:02:57.740214 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:02:57.780346 [debug] [MainThread]: SQL status: COMMIT in 0.040 seconds
+[0m10:02:57.781008 [debug] [MainThread]: On master: Close
+[0m10:02:57.781764 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:02:57.782287 [debug] [MainThread]: Connection 'list_spain_weather_tourism' was properly closed.
+[0m10:02:57.782728 [debug] [MainThread]: Connection 'list_spain_weather_tourism_public' was properly closed.
+[0m10:02:57.783159 [debug] [MainThread]: Connection 'model.spain_weather.stg_aemet' was properly closed.
+[0m10:02:57.783597 [debug] [MainThread]: Connection 'model.spain_weather.stg_ine_tourism' was properly closed.
+[0m10:02:57.784042 [debug] [MainThread]: Connection 'model.spain_weather.mart_weather_tourism' was properly closed.
+[0m10:02:57.784636 [info ] [MainThread]: 
+[0m10:02:57.785395 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 4.52 seconds (4.52s).
+[0m10:02:57.787727 [debug] [MainThread]: Command end result
+[0m10:02:57.834318 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:02:57.839394 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:02:57.855227 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\run_results.json
+[0m10:02:57.856068 [info ] [MainThread]: 
+[0m10:02:57.857209 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:02:57.857878 [info ] [MainThread]: 
+[0m10:02:57.858525 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:02:57.860327 [debug] [MainThread]: Command `dbt run` succeeded at 10:02:57.860176 after 8.80 seconds
+[0m10:02:57.860916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C337E1150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C3371DF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027C321B0DE0>]}
+[0m10:02:57.861476 [debug] [MainThread]: Flushing usage events
+[0m10:02:58.888584 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:10:24.451588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D25237B380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2537C3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2537C39D0>]}
+
+
+============================== 10:10:24.458647 | ec887a95-8480-46ab-bf3e-97cb5dd64518 ==============================
+[0m10:10:24.458647 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:10:24.459610 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\DataAnalyst\\spain-climate-tourism-pipeline\\dbt\\logs'}
+[0m10:10:24.880616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D252AB6060>]}
+[0m10:10:25.014018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2508E5480>]}
+[0m10:10:25.016051 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:10:25.515828 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:10:25.818919 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:10:25.820040 [debug] [MainThread]: Partial parsing: updated file: spain_weather://models\marts\mart_weather_tourism.sql
+[0m10:10:26.771478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D25511EB50>]}
+[0m10:10:26.950018 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:10:26.953910 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:10:26.993638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D253633C50>]}
+[0m10:10:26.994370 [info ] [MainThread]: Found 3 models, 14 data tests, 1 seed, 3 sources, 464 macros
+[0m10:10:26.995101 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D254E63150>]}
+[0m10:10:26.998253 [info ] [MainThread]: 
+[0m10:10:26.998919 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:10:26.999523 [info ] [MainThread]: 
+[0m10:10:27.000486 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:10:27.007356 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism'
+[0m10:10:27.172008 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism"
+[0m10:10:27.172602 [debug] [ThreadPool]: On list_spain_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:10:27.173086 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:27.201556 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.028 seconds
+[0m10:10:27.203771 [debug] [ThreadPool]: On list_spain_weather_tourism: Close
+[0m10:10:27.206456 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism_public'
+[0m10:10:27.215729 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism_public"
+[0m10:10:27.216373 [debug] [ThreadPool]: On list_spain_weather_tourism_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism_public"} */
+select
+      'spain_weather_tourism' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:10:27.216909 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:27.239213 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.022 seconds
+[0m10:10:27.241351 [debug] [ThreadPool]: On list_spain_weather_tourism_public: ROLLBACK
+[0m10:10:27.242874 [debug] [ThreadPool]: On list_spain_weather_tourism_public: Close
+[0m10:10:27.251008 [debug] [MainThread]: Using postgres connection "master"
+[0m10:10:27.251754 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:10:27.252509 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:10:27.275599 [debug] [MainThread]: SQL status: SELECT 2 in 0.023 seconds
+[0m10:10:27.278310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D25571E270>]}
+[0m10:10:27.278945 [debug] [MainThread]: On master: ROLLBACK
+[0m10:10:27.280594 [debug] [MainThread]: On master: COMMIT
+[0m10:10:27.281099 [debug] [MainThread]: Using postgres connection "master"
+[0m10:10:27.281561 [debug] [MainThread]: On master: COMMIT
+[0m10:10:27.283835 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m10:10:27.284329 [debug] [MainThread]: On master: Close
+[0m10:10:27.291598 [debug] [Thread-1 (]: Began running node model.spain_weather.stg_aemet
+[0m10:10:27.292393 [debug] [Thread-2 (]: Began running node model.spain_weather.stg_ine_tourism
+[0m10:10:27.293371 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_aemet ................................... [RUN]
+[0m10:10:27.295152 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.spain_weather.stg_aemet'
+[0m10:10:27.294179 [info ] [Thread-2 (]: 2 of 3 START sql view model public.stg_ine_tourism ............................. [RUN]
+[0m10:10:27.295937 [debug] [Thread-1 (]: Began compiling node model.spain_weather.stg_aemet
+[0m10:10:27.296783 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.spain_weather.stg_ine_tourism'
+[0m10:10:27.308801 [debug] [Thread-1 (]: Writing injected SQL for node "model.spain_weather.stg_aemet"
+[0m10:10:27.309531 [debug] [Thread-2 (]: Began compiling node model.spain_weather.stg_ine_tourism
+[0m10:10:27.314309 [debug] [Thread-2 (]: Writing injected SQL for node "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.316073 [debug] [Thread-1 (]: Began executing node model.spain_weather.stg_aemet
+[0m10:10:27.325665 [debug] [Thread-2 (]: Began executing node model.spain_weather.stg_ine_tourism
+[0m10:10:27.390920 [debug] [Thread-2 (]: Writing runtime sql for node "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.393358 [debug] [Thread-1 (]: Writing runtime sql for node "model.spain_weather.stg_aemet"
+[0m10:10:27.395171 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.395975 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+
+  create view "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_ine_tourism"
+),
+
+cleaned as (
+    select
+        provincia                                          as province_name,
+        metric,
+        year::int                                          as year,
+        replace(month, 'M', '')::int                       as month,
+        value::numeric                                     as value,
+        extracted_at
+
+    from source
+    where
+        -- Remove null values marked as secret by INE
+        secret is null
+        and value is not null
+        -- Only 2019 onwards
+        and year::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:10:27.396740 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:10:27.397369 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:10:27.398108 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+
+  create view "spain_weather_tourism"."public"."stg_aemet__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_aemet_climate"
+),
+
+cleaned as (
+    select
+        indicativo                                    as station_id,
+        -- Split fecha "2023-9" into year and month
+        split_part(fecha, '-', 1)::int                as year,
+        split_part(fecha, '-', 2)::int                as month,
+        
+        -- Temperature
+        tm_mes::numeric                               as avg_temp,
+        tm_max::numeric                               as avg_max_temp,
+        tm_min::numeric                               as avg_min_temp,
+        
+        -- Precipitation and sunshine
+        p_mes::numeric                                as precipitation,
+        e::numeric                                    as sunshine_hours,
+        n_des::int                                    as sunny_days,
+        n_cub::int                                    as cloudy_days,
+        
+        -- Other
+        hr::numeric                                   as humidity,
+        w_med::numeric                                as avg_wind,
+        
+        extracted_at
+
+    from source
+    where
+        -- Remove annual summary rows (month 13)
+        split_part(fecha, '-', 2)::int between 1 and 12
+        -- Only 2019 onwards
+        and split_part(fecha, '-', 1)::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:10:27.399057 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:10:27.424213 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.027 seconds
+[0m10:10:27.434551 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.435290 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.036 seconds
+[0m10:10:27.436082 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism" rename to "stg_ine_tourism__dbt_backup"
+[0m10:10:27.441485 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:10:27.442243 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet" rename to "stg_aemet__dbt_backup"
+[0m10:10:27.444048 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:10:27.444732 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:10:27.449493 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.454259 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:10:27.454973 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp" rename to "stg_ine_tourism"
+[0m10:10:27.455665 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet__dbt_tmp" rename to "stg_aemet"
+[0m10:10:27.458154 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:10:27.458796 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:10:27.486987 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:10:27.489669 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:10:27.490412 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:10:27.491080 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.491713 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:10:27.492393 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:10:27.497882 [debug] [Thread-2 (]: SQL status: COMMIT in 0.005 seconds
+[0m10:10:27.508287 [debug] [Thread-2 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup"
+[0m10:10:27.509046 [debug] [Thread-1 (]: SQL status: COMMIT in 0.016 seconds
+[0m10:10:27.518119 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:10:27.522387 [debug] [Thread-1 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_aemet__dbt_backup"
+[0m10:10:27.523090 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+drop view if exists "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup" cascade
+[0m10:10:27.524320 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:10:27.525121 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+drop view if exists "spain_weather_tourism"."public"."stg_aemet__dbt_backup" cascade
+[0m10:10:27.530182 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m10:10:27.533787 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: Close
+[0m10:10:27.534514 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.009 seconds
+[0m10:10:27.537159 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: Close
+[0m10:10:27.541115 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2555193D0>]}
+[0m10:10:27.541700 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D2554D7EE0>]}
+[0m10:10:27.542776 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_aemet .............................. [[32mCREATE VIEW[0m in 0.24s]
+[0m10:10:27.544948 [debug] [Thread-1 (]: Finished running node model.spain_weather.stg_aemet
+[0m10:10:27.543818 [info ] [Thread-2 (]: 2 of 3 OK created sql view model public.stg_ine_tourism ........................ [[32mCREATE VIEW[0m in 0.24s]
+[0m10:10:27.546386 [debug] [Thread-2 (]: Finished running node model.spain_weather.stg_ine_tourism
+[0m10:10:27.547409 [debug] [Thread-3 (]: Began running node model.spain_weather.mart_weather_tourism
+[0m10:10:27.548272 [info ] [Thread-3 (]: 3 of 3 START sql table model public.mart_weather_tourism ....................... [RUN]
+[0m10:10:27.549271 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.spain_weather.mart_weather_tourism'
+[0m10:10:27.549946 [debug] [Thread-3 (]: Began compiling node model.spain_weather.mart_weather_tourism
+[0m10:10:27.555109 [debug] [Thread-3 (]: Writing injected SQL for node "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.556740 [debug] [Thread-3 (]: Began executing node model.spain_weather.mart_weather_tourism
+[0m10:10:27.594681 [debug] [Thread-3 (]: Writing runtime sql for node "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.596303 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.597098 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+
+  
+    
+
+  create  table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with weather as (
+    select * from "spain_weather_tourism"."public"."stg_aemet"
+),
+
+tourism as (
+    select * from "spain_weather_tourism"."public"."stg_ine_tourism"
+),
+
+provinces as (
+    select * from "spain_weather_tourism"."public"."province_mapping"
+),
+
+-- Join weather with province mapping to get province names
+weather_by_province as (
+    select
+        p.province_name,
+        p.ccaa,
+        w.year,
+        w.month,
+        -- Imputación de temperatura media
+        coalesce(
+            w.avg_temp, 
+            avg(w.avg_temp) over(partition by p.province_name, w.month)
+        ) as avg_temp,
+        -- Imputación de máximas y mínimas (opcional, pero recomendado para consistencia)
+        coalesce(w.avg_max_temp, avg(w.avg_max_temp) over(partition by p.province_name, w.month)) as avg_max_temp,
+        coalesce(w.avg_min_temp, avg(w.avg_min_temp) over(partition by p.province_name, w.month)) as avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind
+    from weather w
+    inner join provinces p
+        on w.station_id = p.station_id::text
+),
+
+-- Pivot tourism: one row per province/year/month with viajeros and pernoctaciones
+tourism_pivoted as (
+    select
+        province_name,
+        year,
+        month,
+        max(case when metric = 'viajeros' then value end)        as tourists,
+        max(case when metric = 'pernoctaciones' then value end)  as overnight_stays
+
+    from tourism
+    group by province_name, year, month
+),
+
+-- Final join
+final as (
+    select
+        w.province_name,
+        w.ccaa,
+        w.year,
+        w.month,
+        -- Weather
+        w.avg_temp,
+        w.avg_max_temp,
+        w.avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind,
+        -- Tourism
+        t.tourists,
+        t.overnight_stays,
+        -- Derived
+        round(t.overnight_stays / nullif(t.tourists, 0), 2)  as avg_stay_days
+
+    from weather_by_province w
+    left join tourism_pivoted t
+        on w.province_name = t.province_name
+        and w.year = t.year
+        and w.month = t.month
+)
+
+select * from final
+  );
+  
+[0m10:10:27.597864 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:10:27.797877 [debug] [Thread-3 (]: SQL status: SELECT 4284 in 0.200 seconds
+[0m10:10:27.808028 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.808678 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism" rename to "mart_weather_tourism__dbt_backup"
+[0m10:10:27.810868 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:10:27.815257 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.815872 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp" rename to "mart_weather_tourism"
+[0m10:10:27.817906 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m10:10:27.820320 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:10:27.820965 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.821545 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:10:27.832814 [debug] [Thread-3 (]: SQL status: COMMIT in 0.011 seconds
+[0m10:10:27.837269 [debug] [Thread-3 (]: Applying DROP to: "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup"
+[0m10:10:27.842810 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:10:27.843498 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+drop table if exists "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup" cascade
+[0m10:10:27.850495 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.006 seconds
+[0m10:10:27.852712 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: Close
+[0m10:10:27.853615 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ec887a95-8480-46ab-bf3e-97cb5dd64518', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D25598B2F0>]}
+[0m10:10:27.854545 [info ] [Thread-3 (]: 3 of 3 OK created sql table model public.mart_weather_tourism .................. [[32mSELECT 4284[0m in 0.30s]
+[0m10:10:27.855955 [debug] [Thread-3 (]: Finished running node model.spain_weather.mart_weather_tourism
+[0m10:10:27.858166 [debug] [MainThread]: On master: COMMIT
+[0m10:10:27.858699 [debug] [MainThread]: Using postgres connection "master"
+[0m10:10:27.859172 [debug] [MainThread]: On master: COMMIT
+[0m10:10:27.859651 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:10:27.878476 [debug] [MainThread]: SQL status: COMMIT in 0.019 seconds
+[0m10:10:27.879110 [debug] [MainThread]: On master: Close
+[0m10:10:27.879885 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:10:27.880553 [debug] [MainThread]: Connection 'list_spain_weather_tourism' was properly closed.
+[0m10:10:27.881018 [debug] [MainThread]: Connection 'list_spain_weather_tourism_public' was properly closed.
+[0m10:10:27.881473 [debug] [MainThread]: Connection 'model.spain_weather.stg_aemet' was properly closed.
+[0m10:10:27.881979 [debug] [MainThread]: Connection 'model.spain_weather.stg_ine_tourism' was properly closed.
+[0m10:10:27.882436 [debug] [MainThread]: Connection 'model.spain_weather.mart_weather_tourism' was properly closed.
+[0m10:10:27.883031 [info ] [MainThread]: 
+[0m10:10:27.883775 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.88 seconds (0.88s).
+[0m10:10:27.885599 [debug] [MainThread]: Command end result
+[0m10:10:27.933720 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:10:27.938534 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:10:27.948353 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\run_results.json
+[0m10:10:27.948883 [info ] [MainThread]: 
+[0m10:10:27.949604 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:10:27.950196 [info ] [MainThread]: 
+[0m10:10:27.950821 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:10:27.952854 [debug] [MainThread]: Command `dbt run` succeeded at 10:10:27.952649 after 3.90 seconds
+[0m10:10:27.953527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D254DEA550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D25532D3D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D24CF09A90>]}
+[0m10:10:27.954093 [debug] [MainThread]: Flushing usage events
+[0m10:10:28.881919 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:10:37.683471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D290C8F380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D2920D3D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D2920D39D0>]}
+
+
+============================== 10:10:37.690370 | 9807a540-1469-4754-bfab-6e6184a3b815 ==============================
+[0m10:10:37.690370 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:10:37.691320 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'log_path': 'C:\\DataAnalyst\\spain-climate-tourism-pipeline\\dbt\\logs'}
+[0m10:10:38.102283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9807a540-1469-4754-bfab-6e6184a3b815', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D2913C6060>]}
+[0m10:10:38.235294 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9807a540-1469-4754-bfab-6e6184a3b815', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D28F1F5480>]}
+[0m10:10:38.237290 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:10:38.841283 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:10:39.145938 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:10:39.146536 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:10:39.147003 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:10:39.244057 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9807a540-1469-4754-bfab-6e6184a3b815', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D292038250>]}
+[0m10:10:39.413896 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:10:39.417660 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:10:39.548380 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9807a540-1469-4754-bfab-6e6184a3b815', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D293C85C70>]}
+[0m10:10:39.549134 [info ] [MainThread]: Found 3 models, 14 data tests, 1 seed, 3 sources, 464 macros
+[0m10:10:39.550047 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9807a540-1469-4754-bfab-6e6184a3b815', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D2937749F0>]}
+[0m10:10:39.554157 [info ] [MainThread]: 
+[0m10:10:39.554865 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:10:39.555467 [info ] [MainThread]: 
+[0m10:10:39.556618 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:10:39.563297 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism_public'
+[0m10:10:39.729383 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism_public"
+[0m10:10:39.730040 [debug] [ThreadPool]: On list_spain_weather_tourism_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism_public"} */
+select
+      'spain_weather_tourism' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:10:39.730575 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:10:39.762874 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.032 seconds
+[0m10:10:39.765174 [debug] [ThreadPool]: On list_spain_weather_tourism_public: ROLLBACK
+[0m10:10:39.767106 [debug] [ThreadPool]: On list_spain_weather_tourism_public: Close
+[0m10:10:39.775838 [debug] [MainThread]: Using postgres connection "master"
+[0m10:10:39.776641 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:10:39.777356 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:10:39.802815 [debug] [MainThread]: SQL status: SELECT 2 in 0.025 seconds
+[0m10:10:39.805412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9807a540-1469-4754-bfab-6e6184a3b815', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D294050A10>]}
+[0m10:10:39.806046 [debug] [MainThread]: On master: ROLLBACK
+[0m10:10:39.807828 [debug] [MainThread]: On master: COMMIT
+[0m10:10:39.808329 [debug] [MainThread]: Using postgres connection "master"
+[0m10:10:39.808786 [debug] [MainThread]: On master: COMMIT
+[0m10:10:39.811342 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m10:10:39.811900 [debug] [MainThread]: On master: Close
+[0m10:10:39.818888 [debug] [Thread-1 (]: Began running node test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2
+[0m10:10:39.819733 [debug] [Thread-3 (]: Began running node test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487
+[0m10:10:39.820515 [debug] [Thread-4 (]: Began running node test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7
+[0m10:10:39.821175 [debug] [Thread-2 (]: Began running node test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0
+[0m10:10:39.821845 [info ] [Thread-1 (]: 1 of 14 START test accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12  [RUN]
+[0m10:10:39.822573 [info ] [Thread-3 (]: 3 of 14 START test accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones  [RUN]
+[0m10:10:39.825020 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2'
+[0m10:10:39.826096 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487'
+[0m10:10:39.823368 [info ] [Thread-4 (]: 4 of 14 START test not_null_mart_weather_tourism_month ......................... [RUN]
+[0m10:10:39.827102 [debug] [Thread-1 (]: Began compiling node test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2
+[0m10:10:39.824041 [info ] [Thread-2 (]: 2 of 14 START test accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12  [RUN]
+[0m10:10:39.828017 [debug] [Thread-3 (]: Began compiling node test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487
+[0m10:10:39.828827 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7'
+[0m10:10:39.859153 [debug] [Thread-1 (]: Writing injected SQL for node "test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2"
+[0m10:10:39.860564 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0'
+[0m10:10:39.870410 [debug] [Thread-3 (]: Writing injected SQL for node "test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487"
+[0m10:10:39.871472 [debug] [Thread-4 (]: Began compiling node test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7
+[0m10:10:39.872468 [debug] [Thread-2 (]: Began compiling node test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0
+[0m10:10:39.889553 [debug] [Thread-4 (]: Writing injected SQL for node "test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7"
+[0m10:10:39.896852 [debug] [Thread-2 (]: Writing injected SQL for node "test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0"
+[0m10:10:39.897901 [debug] [Thread-1 (]: Began executing node test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2
+[0m10:10:39.932100 [debug] [Thread-1 (]: Writing runtime sql for node "test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2"
+[0m10:10:39.933021 [debug] [Thread-3 (]: Began executing node test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487
+[0m10:10:39.937575 [debug] [Thread-3 (]: Writing runtime sql for node "test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487"
+[0m10:10:39.938573 [debug] [Thread-4 (]: Began executing node test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7
+[0m10:10:39.939296 [debug] [Thread-2 (]: Began executing node test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0
+[0m10:10:39.943727 [debug] [Thread-4 (]: Writing runtime sql for node "test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7"
+[0m10:10:39.947891 [debug] [Thread-2 (]: Writing runtime sql for node "test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0"
+[0m10:10:39.948682 [debug] [Thread-1 (]: Using postgres connection "test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2"
+[0m10:10:39.949625 [debug] [Thread-3 (]: Using postgres connection "test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487"
+[0m10:10:39.950627 [debug] [Thread-1 (]: On test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        month as value_field,
+        count(*) as n_records
+
+    from "spain_weather_tourism"."public"."mart_weather_tourism"
+    group by month
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1','2','3','4','5','6','7','8','9','10','11','12'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:39.951578 [debug] [Thread-3 (]: On test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        metric as value_field,
+        count(*) as n_records
+
+    from "spain_weather_tourism"."public"."stg_ine_tourism"
+    group by metric
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'viajeros','pernoctaciones'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:39.952435 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:10:39.953280 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:10:39.954049 [debug] [Thread-4 (]: Using postgres connection "test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7"
+[0m10:10:39.955100 [debug] [Thread-2 (]: Using postgres connection "test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0"
+[0m10:10:39.956196 [debug] [Thread-4 (]: On test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "spain_weather_tourism"."public"."mart_weather_tourism"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:39.957204 [debug] [Thread-2 (]: On test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        month as value_field,
+        count(*) as n_records
+
+    from "spain_weather_tourism"."public"."stg_aemet"
+    group by month
+
+)
+
+select *
+from all_values
+where value_field not in (
+    '1','2','3','4','5','6','7','8','9','10','11','12'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:39.958223 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m10:10:39.959211 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:10:39.977307 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.025 seconds
+[0m10:10:39.984798 [debug] [Thread-1 (]: On test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2: ROLLBACK
+[0m10:10:39.987531 [debug] [Thread-1 (]: On test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2: Close
+[0m10:10:39.989144 [info ] [Thread-1 (]: 1 of 14 PASS accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12  [[32mPASS[0m in 0.16s]
+[0m10:10:39.990901 [debug] [Thread-1 (]: Finished running node test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2
+[0m10:10:39.991887 [debug] [Thread-1 (]: Began running node test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1
+[0m10:10:39.992884 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.035 seconds
+[0m10:10:39.996999 [debug] [Thread-4 (]: On test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7: ROLLBACK
+[0m10:10:39.997935 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.039 seconds
+[0m10:10:39.993910 [info ] [Thread-1 (]: 5 of 14 START test not_null_mart_weather_tourism_province_name ................. [RUN]
+[0m10:10:40.001502 [debug] [Thread-2 (]: On test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0: ROLLBACK
+[0m10:10:40.002820 [debug] [Thread-4 (]: On test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7: Close
+[0m10:10:40.004051 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spain_weather.accepted_values_mart_weather_tourism_month__1__2__3__4__5__6__7__8__9__10__11__12.e6e47280e2, now test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1)
+[0m10:10:40.005450 [debug] [Thread-1 (]: Began compiling node test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1
+[0m10:10:40.017044 [debug] [Thread-1 (]: Writing injected SQL for node "test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1"
+[0m10:10:40.007028 [info ] [Thread-4 (]: 4 of 14 PASS not_null_mart_weather_tourism_month ............................... [[32mPASS[0m in 0.18s]
+[0m10:10:40.018242 [debug] [Thread-2 (]: On test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0: Close
+[0m10:10:40.019104 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.066 seconds
+[0m10:10:40.020643 [debug] [Thread-4 (]: Finished running node test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7
+[0m10:10:40.023210 [debug] [Thread-3 (]: On test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487: ROLLBACK
+[0m10:10:40.024837 [debug] [Thread-4 (]: Began running node test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661
+[0m10:10:40.024264 [info ] [Thread-2 (]: 2 of 14 PASS accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12  [[32mPASS[0m in 0.16s]
+[0m10:10:40.026212 [info ] [Thread-4 (]: 6 of 14 START test not_null_mart_weather_tourism_year .......................... [RUN]
+[0m10:10:40.027858 [debug] [Thread-2 (]: Finished running node test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0
+[0m10:10:40.028529 [debug] [Thread-1 (]: Began executing node test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1
+[0m10:10:40.029199 [debug] [Thread-3 (]: On test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487: Close
+[0m10:10:40.029895 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_mart_weather_tourism_month.f6b98081e7, now test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661)
+[0m10:10:40.030639 [debug] [Thread-2 (]: Began running node test.spain_weather.not_null_stg_aemet_month.338d2c2220
+[0m10:10:40.035117 [debug] [Thread-1 (]: Writing runtime sql for node "test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1"
+[0m10:10:40.036191 [debug] [Thread-4 (]: Began compiling node test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661
+[0m10:10:40.036994 [info ] [Thread-2 (]: 7 of 14 START test not_null_stg_aemet_month .................................... [RUN]
+[0m10:10:40.045777 [debug] [Thread-4 (]: Writing injected SQL for node "test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661"
+[0m10:10:40.038037 [info ] [Thread-3 (]: 3 of 14 PASS accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones .. [[32mPASS[0m in 0.21s]
+[0m10:10:40.047050 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spain_weather.accepted_values_stg_aemet_month__1__2__3__4__5__6__7__8__9__10__11__12.d6c2b39ba0, now test.spain_weather.not_null_stg_aemet_month.338d2c2220)
+[0m10:10:40.048212 [debug] [Thread-1 (]: Using postgres connection "test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1"
+[0m10:10:40.049123 [debug] [Thread-3 (]: Finished running node test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487
+[0m10:10:40.049818 [debug] [Thread-2 (]: Began compiling node test.spain_weather.not_null_stg_aemet_month.338d2c2220
+[0m10:10:40.050493 [debug] [Thread-1 (]: On test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select province_name
+from "spain_weather_tourism"."public"."mart_weather_tourism"
+where province_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.051340 [debug] [Thread-3 (]: Began running node test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd
+[0m10:10:40.058395 [debug] [Thread-2 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_aemet_month.338d2c2220"
+[0m10:10:40.059319 [debug] [Thread-4 (]: Began executing node test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661
+[0m10:10:40.060040 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:10:40.060755 [info ] [Thread-3 (]: 8 of 14 START test not_null_stg_aemet_station_id ............................... [RUN]
+[0m10:10:40.064986 [debug] [Thread-4 (]: Writing runtime sql for node "test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661"
+[0m10:10:40.066065 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spain_weather.accepted_values_stg_ine_tourism_metric__viajeros__pernoctaciones.bfeb9c5487, now test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd)
+[0m10:10:40.066706 [debug] [Thread-2 (]: Began executing node test.spain_weather.not_null_stg_aemet_month.338d2c2220
+[0m10:10:40.067581 [debug] [Thread-3 (]: Began compiling node test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd
+[0m10:10:40.072125 [debug] [Thread-2 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_aemet_month.338d2c2220"
+[0m10:10:40.078886 [debug] [Thread-3 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd"
+[0m10:10:40.080242 [debug] [Thread-4 (]: Using postgres connection "test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661"
+[0m10:10:40.081012 [debug] [Thread-4 (]: On test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select year
+from "spain_weather_tourism"."public"."mart_weather_tourism"
+where year is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.081737 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:10:40.082951 [debug] [Thread-3 (]: Began executing node test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd
+[0m10:10:40.083788 [debug] [Thread-2 (]: Using postgres connection "test.spain_weather.not_null_stg_aemet_month.338d2c2220"
+[0m10:10:40.088325 [debug] [Thread-3 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd"
+[0m10:10:40.089238 [debug] [Thread-2 (]: On test.spain_weather.not_null_stg_aemet_month.338d2c2220: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_aemet_month.338d2c2220"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "spain_weather_tourism"."public"."stg_aemet"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.090008 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.030 seconds
+[0m10:10:40.090757 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:10:40.093033 [debug] [Thread-1 (]: On test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1: ROLLBACK
+[0m10:10:40.094312 [debug] [Thread-3 (]: Using postgres connection "test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd"
+[0m10:10:40.095030 [debug] [Thread-3 (]: On test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select station_id
+from "spain_weather_tourism"."public"."stg_aemet"
+where station_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.095681 [debug] [Thread-1 (]: On test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1: Close
+[0m10:10:40.096298 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:10:40.097675 [info ] [Thread-1 (]: 5 of 14 PASS not_null_mart_weather_tourism_province_name ....................... [[32mPASS[0m in 0.09s]
+[0m10:10:40.099283 [debug] [Thread-1 (]: Finished running node test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1
+[0m10:10:40.100361 [debug] [Thread-1 (]: Began running node test.spain_weather.not_null_stg_aemet_year.ab60bacee1
+[0m10:10:40.101442 [info ] [Thread-1 (]: 9 of 14 START test not_null_stg_aemet_year ..................................... [RUN]
+[0m10:10:40.102782 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_mart_weather_tourism_province_name.f135e93fe1, now test.spain_weather.not_null_stg_aemet_year.ab60bacee1)
+[0m10:10:40.103770 [debug] [Thread-1 (]: Began compiling node test.spain_weather.not_null_stg_aemet_year.ab60bacee1
+[0m10:10:40.110560 [debug] [Thread-1 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_aemet_year.ab60bacee1"
+[0m10:10:40.111410 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.030 seconds
+[0m10:10:40.114090 [debug] [Thread-4 (]: On test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661: ROLLBACK
+[0m10:10:40.115465 [debug] [Thread-1 (]: Began executing node test.spain_weather.not_null_stg_aemet_year.ab60bacee1
+[0m10:10:40.116349 [debug] [Thread-4 (]: On test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661: Close
+[0m10:10:40.120605 [debug] [Thread-1 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_aemet_year.ab60bacee1"
+[0m10:10:40.121490 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.031 seconds
+[0m10:10:40.125034 [debug] [Thread-2 (]: On test.spain_weather.not_null_stg_aemet_month.338d2c2220: ROLLBACK
+[0m10:10:40.122735 [info ] [Thread-4 (]: 6 of 14 PASS not_null_mart_weather_tourism_year ................................ [[32mPASS[0m in 0.09s]
+[0m10:10:40.126664 [debug] [Thread-4 (]: Finished running node test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661
+[0m10:10:40.127459 [debug] [Thread-2 (]: On test.spain_weather.not_null_stg_aemet_month.338d2c2220: Close
+[0m10:10:40.128184 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.032 seconds
+[0m10:10:40.128828 [debug] [Thread-4 (]: Began running node test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79
+[0m10:10:40.130655 [debug] [Thread-1 (]: Using postgres connection "test.spain_weather.not_null_stg_aemet_year.ab60bacee1"
+[0m10:10:40.133006 [debug] [Thread-3 (]: On test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd: ROLLBACK
+[0m10:10:40.129941 [info ] [Thread-2 (]: 7 of 14 PASS not_null_stg_aemet_month .......................................... [[32mPASS[0m in 0.08s]
+[0m10:10:40.134731 [debug] [Thread-1 (]: On test.spain_weather.not_null_stg_aemet_year.ab60bacee1: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_aemet_year.ab60bacee1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select year
+from "spain_weather_tourism"."public"."stg_aemet"
+where year is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.134046 [info ] [Thread-4 (]: 10 of 14 START test not_null_stg_ine_tourism_metric ............................ [RUN]
+[0m10:10:40.136287 [debug] [Thread-2 (]: Finished running node test.spain_weather.not_null_stg_aemet_month.338d2c2220
+[0m10:10:40.137161 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:10:40.137918 [debug] [Thread-3 (]: On test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd: Close
+[0m10:10:40.138653 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_mart_weather_tourism_year.27c40b5661, now test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79)
+[0m10:10:40.139469 [debug] [Thread-2 (]: Began running node test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c
+[0m10:10:40.140622 [debug] [Thread-4 (]: Began compiling node test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79
+[0m10:10:40.141616 [info ] [Thread-3 (]: 8 of 14 PASS not_null_stg_aemet_station_id ..................................... [[32mPASS[0m in 0.08s]
+[0m10:10:40.148878 [debug] [Thread-4 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79"
+[0m10:10:40.142274 [info ] [Thread-2 (]: 11 of 14 START test not_null_stg_ine_tourism_month ............................. [RUN]
+[0m10:10:40.150194 [debug] [Thread-3 (]: Finished running node test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd
+[0m10:10:40.151145 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_stg_aemet_month.338d2c2220, now test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c)
+[0m10:10:40.152281 [debug] [Thread-3 (]: Began running node test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68
+[0m10:10:40.153449 [debug] [Thread-2 (]: Began compiling node test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c
+[0m10:10:40.166038 [debug] [Thread-2 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c"
+[0m10:10:40.166876 [debug] [Thread-4 (]: Began executing node test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79
+[0m10:10:40.154333 [info ] [Thread-3 (]: 12 of 14 START test not_null_stg_ine_tourism_province_name ..................... [RUN]
+[0m10:10:40.172191 [debug] [Thread-4 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79"
+[0m10:10:40.173054 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_stg_aemet_station_id.cbb08d72cd, now test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68)
+[0m10:10:40.173895 [debug] [Thread-3 (]: Began compiling node test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68
+[0m10:10:40.174662 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.037 seconds
+[0m10:10:40.181068 [debug] [Thread-3 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68"
+[0m10:10:40.183376 [debug] [Thread-1 (]: On test.spain_weather.not_null_stg_aemet_year.ab60bacee1: ROLLBACK
+[0m10:10:40.184218 [debug] [Thread-2 (]: Began executing node test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c
+[0m10:10:40.185611 [debug] [Thread-4 (]: Using postgres connection "test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79"
+[0m10:10:40.190063 [debug] [Thread-2 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c"
+[0m10:10:40.190898 [debug] [Thread-1 (]: On test.spain_weather.not_null_stg_aemet_year.ab60bacee1: Close
+[0m10:10:40.191647 [debug] [Thread-4 (]: On test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select metric
+from "spain_weather_tourism"."public"."stg_ine_tourism"
+where metric is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.192855 [debug] [Thread-3 (]: Began executing node test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68
+[0m10:10:40.193492 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:10:40.198132 [debug] [Thread-3 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68"
+[0m10:10:40.194392 [info ] [Thread-1 (]: 9 of 14 PASS not_null_stg_aemet_year ........................................... [[32mPASS[0m in 0.09s]
+[0m10:10:40.199724 [debug] [Thread-2 (]: Using postgres connection "test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c"
+[0m10:10:40.200867 [debug] [Thread-1 (]: Finished running node test.spain_weather.not_null_stg_aemet_year.ab60bacee1
+[0m10:10:40.201625 [debug] [Thread-2 (]: On test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select month
+from "spain_weather_tourism"."public"."stg_ine_tourism"
+where month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.202508 [debug] [Thread-1 (]: Began running node test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36
+[0m10:10:40.203247 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m10:10:40.204388 [debug] [Thread-3 (]: Using postgres connection "test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68"
+[0m10:10:40.205287 [info ] [Thread-1 (]: 13 of 14 START test not_null_stg_ine_tourism_value ............................. [RUN]
+[0m10:10:40.206436 [debug] [Thread-3 (]: On test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select province_name
+from "spain_weather_tourism"."public"."stg_ine_tourism"
+where province_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.207281 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_stg_aemet_year.ab60bacee1, now test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36)
+[0m10:10:40.208217 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m10:10:40.208935 [debug] [Thread-1 (]: Began compiling node test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36
+[0m10:10:40.217273 [debug] [Thread-1 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36"
+[0m10:10:40.219448 [debug] [Thread-1 (]: Began executing node test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36
+[0m10:10:40.225071 [debug] [Thread-1 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36"
+[0m10:10:40.227155 [debug] [Thread-1 (]: Using postgres connection "test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36"
+[0m10:10:40.228478 [debug] [Thread-1 (]: On test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select value
+from "spain_weather_tourism"."public"."stg_ine_tourism"
+where value is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.229312 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:10:40.255514 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.062 seconds
+[0m10:10:40.258651 [debug] [Thread-4 (]: On test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79: ROLLBACK
+[0m10:10:40.260989 [debug] [Thread-4 (]: On test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79: Close
+[0m10:10:40.262529 [info ] [Thread-4 (]: 10 of 14 PASS not_null_stg_ine_tourism_metric .................................. [[32mPASS[0m in 0.12s]
+[0m10:10:40.264197 [debug] [Thread-4 (]: Finished running node test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79
+[0m10:10:40.264970 [debug] [Thread-4 (]: Began running node test.spain_weather.not_null_stg_ine_tourism_year.22434713ae
+[0m10:10:40.265745 [info ] [Thread-4 (]: 14 of 14 START test not_null_stg_ine_tourism_year .............................. [RUN]
+[0m10:10:40.266789 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.spain_weather.not_null_stg_ine_tourism_metric.4559de7f79, now test.spain_weather.not_null_stg_ine_tourism_year.22434713ae)
+[0m10:10:40.267705 [debug] [Thread-4 (]: Began compiling node test.spain_weather.not_null_stg_ine_tourism_year.22434713ae
+[0m10:10:40.268720 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.060 seconds
+[0m10:10:40.276222 [debug] [Thread-4 (]: Writing injected SQL for node "test.spain_weather.not_null_stg_ine_tourism_year.22434713ae"
+[0m10:10:40.277023 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.074 seconds
+[0m10:10:40.279272 [debug] [Thread-3 (]: On test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68: ROLLBACK
+[0m10:10:40.281769 [debug] [Thread-2 (]: On test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c: ROLLBACK
+[0m10:10:40.283311 [debug] [Thread-4 (]: Began executing node test.spain_weather.not_null_stg_ine_tourism_year.22434713ae
+[0m10:10:40.287781 [debug] [Thread-4 (]: Writing runtime sql for node "test.spain_weather.not_null_stg_ine_tourism_year.22434713ae"
+[0m10:10:40.288487 [debug] [Thread-3 (]: On test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68: Close
+[0m10:10:40.289167 [debug] [Thread-2 (]: On test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c: Close
+[0m10:10:40.290807 [info ] [Thread-3 (]: 12 of 14 PASS not_null_stg_ine_tourism_province_name ........................... [[32mPASS[0m in 0.12s]
+[0m10:10:40.293162 [debug] [Thread-3 (]: Finished running node test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68
+[0m10:10:40.291752 [info ] [Thread-2 (]: 11 of 14 PASS not_null_stg_ine_tourism_month ................................... [[32mPASS[0m in 0.14s]
+[0m10:10:40.294308 [debug] [Thread-4 (]: Using postgres connection "test.spain_weather.not_null_stg_ine_tourism_year.22434713ae"
+[0m10:10:40.295416 [debug] [Thread-2 (]: Finished running node test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c
+[0m10:10:40.296244 [debug] [Thread-4 (]: On test.spain_weather.not_null_stg_ine_tourism_year.22434713ae: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "test.spain_weather.not_null_stg_ine_tourism_year.22434713ae"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select year
+from "spain_weather_tourism"."public"."stg_ine_tourism"
+where year is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m10:10:40.297276 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m10:10:40.343103 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.114 seconds
+[0m10:10:40.345567 [debug] [Thread-1 (]: On test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36: ROLLBACK
+[0m10:10:40.347819 [debug] [Thread-1 (]: On test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36: Close
+[0m10:10:40.348587 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.051 seconds
+[0m10:10:40.351203 [debug] [Thread-4 (]: On test.spain_weather.not_null_stg_ine_tourism_year.22434713ae: ROLLBACK
+[0m10:10:40.352387 [info ] [Thread-1 (]: 13 of 14 PASS not_null_stg_ine_tourism_value ................................... [[32mPASS[0m in 0.15s]
+[0m10:10:40.354094 [debug] [Thread-1 (]: Finished running node test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36
+[0m10:10:40.355055 [debug] [Thread-4 (]: On test.spain_weather.not_null_stg_ine_tourism_year.22434713ae: Close
+[0m10:10:40.356486 [info ] [Thread-4 (]: 14 of 14 PASS not_null_stg_ine_tourism_year .................................... [[32mPASS[0m in 0.09s]
+[0m10:10:40.357626 [debug] [Thread-4 (]: Finished running node test.spain_weather.not_null_stg_ine_tourism_year.22434713ae
+[0m10:10:40.360094 [debug] [MainThread]: On master: COMMIT
+[0m10:10:40.360765 [debug] [MainThread]: Using postgres connection "master"
+[0m10:10:40.361296 [debug] [MainThread]: On master: COMMIT
+[0m10:10:40.361819 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:10:40.381004 [debug] [MainThread]: SQL status: COMMIT in 0.019 seconds
+[0m10:10:40.381637 [debug] [MainThread]: On master: Close
+[0m10:10:40.382362 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:10:40.382827 [debug] [MainThread]: Connection 'list_spain_weather_tourism_public' was properly closed.
+[0m10:10:40.383261 [debug] [MainThread]: Connection 'test.spain_weather.not_null_stg_ine_tourism_value.76449c5f36' was properly closed.
+[0m10:10:40.383743 [debug] [MainThread]: Connection 'test.spain_weather.not_null_stg_ine_tourism_province_name.4b0fed0b68' was properly closed.
+[0m10:10:40.384178 [debug] [MainThread]: Connection 'test.spain_weather.not_null_stg_ine_tourism_year.22434713ae' was properly closed.
+[0m10:10:40.384620 [debug] [MainThread]: Connection 'test.spain_weather.not_null_stg_ine_tourism_month.d33b9b694c' was properly closed.
+[0m10:10:40.385219 [info ] [MainThread]: 
+[0m10:10:40.386103 [info ] [MainThread]: Finished running 14 data tests in 0 hours 0 minutes and 0.83 seconds (0.83s).
+[0m10:10:40.391193 [debug] [MainThread]: Command end result
+[0m10:10:40.437041 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:10:40.441041 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:10:40.452814 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\run_results.json
+[0m10:10:40.453487 [info ] [MainThread]: 
+[0m10:10:40.454523 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:10:40.455258 [info ] [MainThread]: 
+[0m10:10:40.455913 [info ] [MainThread]: Done. PASS=14 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=14
+[0m10:10:40.457724 [debug] [MainThread]: Command `dbt test` succeeded at 10:10:40.457573 after 3.07 seconds
+[0m10:10:40.458309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D291F6AF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D294009390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D294009DE0>]}
+[0m10:10:40.458862 [debug] [MainThread]: Flushing usage events
+[0m10:10:41.384129 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:26:26.182555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351B12F380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351C573890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351C573D90>]}
+
+
+============================== 10:26:26.189675 | 0d2b4321-9b8b-4354-8387-b3cd07ff2142 ==============================
+[0m10:26:26.189675 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:26:26.190715 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\DataAnalyst\\spain-climate-tourism-pipeline\\dbt\\logs'}
+[0m10:26:26.611211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351B86A060>]}
+[0m10:26:26.745441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013519695480>]}
+[0m10:26:26.747639 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:26:27.269711 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:26:27.552146 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:26:27.553074 [debug] [MainThread]: Partial parsing: updated file: spain_weather://seeds\province_mapping.csv
+[0m10:26:28.090141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351DF69250>]}
+[0m10:26:28.263734 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:26:28.268773 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:26:28.312595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351DD1BB60>]}
+[0m10:26:28.313343 [info ] [MainThread]: Found 3 models, 14 data tests, 1 seed, 3 sources, 464 macros
+[0m10:26:28.314044 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351DC7A190>]}
+[0m10:26:28.317186 [info ] [MainThread]: 
+[0m10:26:28.317880 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:26:28.318453 [info ] [MainThread]: 
+[0m10:26:28.319268 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:26:28.325950 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism'
+[0m10:26:28.491531 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism"
+[0m10:26:28.492136 [debug] [ThreadPool]: On list_spain_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:26:28.492640 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:26:28.522982 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.030 seconds
+[0m10:26:28.525170 [debug] [ThreadPool]: On list_spain_weather_tourism: Close
+[0m10:26:28.528197 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism_public'
+[0m10:26:28.537683 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism_public"
+[0m10:26:28.538355 [debug] [ThreadPool]: On list_spain_weather_tourism_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism_public"} */
+select
+      'spain_weather_tourism' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:26:28.538907 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:26:28.563501 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.025 seconds
+[0m10:26:28.565650 [debug] [ThreadPool]: On list_spain_weather_tourism_public: ROLLBACK
+[0m10:26:28.567694 [debug] [ThreadPool]: On list_spain_weather_tourism_public: Close
+[0m10:26:28.576308 [debug] [MainThread]: Using postgres connection "master"
+[0m10:26:28.577062 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:26:28.577676 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:26:28.602296 [debug] [MainThread]: SQL status: SELECT 2 in 0.025 seconds
+[0m10:26:28.604901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E3BB2B0>]}
+[0m10:26:28.605561 [debug] [MainThread]: On master: ROLLBACK
+[0m10:26:28.607345 [debug] [MainThread]: On master: COMMIT
+[0m10:26:28.607895 [debug] [MainThread]: Using postgres connection "master"
+[0m10:26:28.608365 [debug] [MainThread]: On master: COMMIT
+[0m10:26:28.610942 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m10:26:28.611534 [debug] [MainThread]: On master: Close
+[0m10:26:28.619718 [debug] [Thread-1 (]: Began running node model.spain_weather.stg_aemet
+[0m10:26:28.620533 [debug] [Thread-2 (]: Began running node model.spain_weather.stg_ine_tourism
+[0m10:26:28.621536 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_aemet ................................... [RUN]
+[0m10:26:28.623410 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.spain_weather.stg_aemet'
+[0m10:26:28.622390 [info ] [Thread-2 (]: 2 of 3 START sql view model public.stg_ine_tourism ............................. [RUN]
+[0m10:26:28.624246 [debug] [Thread-1 (]: Began compiling node model.spain_weather.stg_aemet
+[0m10:26:28.625141 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.spain_weather.stg_ine_tourism'
+[0m10:26:28.637104 [debug] [Thread-1 (]: Writing injected SQL for node "model.spain_weather.stg_aemet"
+[0m10:26:28.637877 [debug] [Thread-2 (]: Began compiling node model.spain_weather.stg_ine_tourism
+[0m10:26:28.643098 [debug] [Thread-2 (]: Writing injected SQL for node "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.644761 [debug] [Thread-1 (]: Began executing node model.spain_weather.stg_aemet
+[0m10:26:28.654965 [debug] [Thread-2 (]: Began executing node model.spain_weather.stg_ine_tourism
+[0m10:26:28.712301 [debug] [Thread-1 (]: Writing runtime sql for node "model.spain_weather.stg_aemet"
+[0m10:26:28.715162 [debug] [Thread-2 (]: Writing runtime sql for node "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.717377 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:26:28.718159 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+
+  create view "spain_weather_tourism"."public"."stg_aemet__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_aemet_climate"
+),
+
+cleaned as (
+    select
+        indicativo                                    as station_id,
+        -- Split fecha "2023-9" into year and month
+        split_part(fecha, '-', 1)::int                as year,
+        split_part(fecha, '-', 2)::int                as month,
+        
+        -- Temperature
+        tm_mes::numeric                               as avg_temp,
+        tm_max::numeric                               as avg_max_temp,
+        tm_min::numeric                               as avg_min_temp,
+        
+        -- Precipitation and sunshine
+        p_mes::numeric                                as precipitation,
+        e::numeric                                    as sunshine_hours,
+        n_des::int                                    as sunny_days,
+        n_cub::int                                    as cloudy_days,
+        
+        -- Other
+        hr::numeric                                   as humidity,
+        w_med::numeric                                as avg_wind,
+        
+        extracted_at
+
+    from source
+    where
+        -- Remove annual summary rows (month 13)
+        split_part(fecha, '-', 2)::int between 1 and 12
+        -- Only 2019 onwards
+        and split_part(fecha, '-', 1)::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:26:28.718996 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.719718 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:26:28.720481 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+
+  create view "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_ine_tourism"
+),
+
+cleaned as (
+    select
+        provincia                                          as province_name,
+        metric,
+        year::int                                          as year,
+        replace(month, 'M', '')::int                       as month,
+        value::numeric                                     as value,
+        extracted_at
+
+    from source
+    where
+        -- Remove null values marked as secret by INE
+        secret is null
+        and value is not null
+        -- Only 2019 onwards
+        and year::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:26:28.721479 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:26:28.743149 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.022 seconds
+[0m10:26:28.753482 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.754295 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism" rename to "stg_ine_tourism__dbt_backup"
+[0m10:26:28.756390 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m10:26:28.761438 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.762209 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.042 seconds
+[0m10:26:28.762901 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp" rename to "stg_ine_tourism"
+[0m10:26:28.769194 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:26:28.770012 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet" rename to "stg_aemet__dbt_backup"
+[0m10:26:28.771791 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:26:28.772555 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:26:28.801053 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:26:28.808833 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:26:28.809588 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.810293 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet__dbt_tmp" rename to "stg_aemet"
+[0m10:26:28.810991 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:26:28.813481 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:26:28.815945 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:26:28.816646 [debug] [Thread-2 (]: SQL status: COMMIT in 0.005 seconds
+[0m10:26:28.817353 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:26:28.828049 [debug] [Thread-2 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup"
+[0m10:26:28.828786 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:26:28.838442 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:26:28.839305 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+drop view if exists "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup" cascade
+[0m10:26:28.841811 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m10:26:28.845900 [debug] [Thread-1 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_aemet__dbt_backup"
+[0m10:26:28.846623 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.007 seconds
+[0m10:26:28.847828 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:26:28.851638 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: Close
+[0m10:26:28.852347 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+drop view if exists "spain_weather_tourism"."public"."stg_aemet__dbt_backup" cascade
+[0m10:26:28.855849 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E548C50>]}
+[0m10:26:28.857537 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.004 seconds
+[0m10:26:28.856914 [info ] [Thread-2 (]: 2 of 3 OK created sql view model public.stg_ine_tourism ........................ [[32mCREATE VIEW[0m in 0.23s]
+[0m10:26:28.860037 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: Close
+[0m10:26:28.861040 [debug] [Thread-2 (]: Finished running node model.spain_weather.stg_ine_tourism
+[0m10:26:28.862250 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E296BA0>]}
+[0m10:26:28.863299 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_aemet .............................. [[32mCREATE VIEW[0m in 0.24s]
+[0m10:26:28.864455 [debug] [Thread-1 (]: Finished running node model.spain_weather.stg_aemet
+[0m10:26:28.865677 [debug] [Thread-3 (]: Began running node model.spain_weather.mart_weather_tourism
+[0m10:26:28.866743 [info ] [Thread-3 (]: 3 of 3 START sql table model public.mart_weather_tourism ....................... [RUN]
+[0m10:26:28.867955 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.spain_weather.mart_weather_tourism'
+[0m10:26:28.868593 [debug] [Thread-3 (]: Began compiling node model.spain_weather.mart_weather_tourism
+[0m10:26:28.874007 [debug] [Thread-3 (]: Writing injected SQL for node "model.spain_weather.mart_weather_tourism"
+[0m10:26:28.875554 [debug] [Thread-3 (]: Began executing node model.spain_weather.mart_weather_tourism
+[0m10:26:28.916974 [debug] [Thread-3 (]: Writing runtime sql for node "model.spain_weather.mart_weather_tourism"
+[0m10:26:28.918928 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:26:28.919819 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+
+  
+    
+
+  create  table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with weather as (
+    select * from "spain_weather_tourism"."public"."stg_aemet"
+),
+
+tourism as (
+    select * from "spain_weather_tourism"."public"."stg_ine_tourism"
+),
+
+provinces as (
+    select * from "spain_weather_tourism"."public"."province_mapping"
+),
+
+-- Join weather with province mapping to get province names
+weather_by_province as (
+    select
+        p.province_name,
+        p.ccaa,
+        w.year,
+        w.month,
+        -- Imputación de temperatura media
+        coalesce(
+            w.avg_temp, 
+            avg(w.avg_temp) over(partition by p.province_name, w.month)
+        ) as avg_temp,
+        -- Imputación de máximas y mínimas (opcional, pero recomendado para consistencia)
+        coalesce(w.avg_max_temp, avg(w.avg_max_temp) over(partition by p.province_name, w.month)) as avg_max_temp,
+        coalesce(w.avg_min_temp, avg(w.avg_min_temp) over(partition by p.province_name, w.month)) as avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind
+    from weather w
+    inner join provinces p
+        on w.station_id = p.station_id::text
+),
+
+-- Pivot tourism: one row per province/year/month with viajeros and pernoctaciones
+tourism_pivoted as (
+    select
+        province_name,
+        year,
+        month,
+        max(case when metric = 'viajeros' then value end)        as tourists,
+        max(case when metric = 'pernoctaciones' then value end)  as overnight_stays
+
+    from tourism
+    group by province_name, year, month
+),
+
+-- Final join
+final as (
+    select
+        w.province_name,
+        w.ccaa,
+        w.year,
+        w.month,
+        -- Weather
+        w.avg_temp,
+        w.avg_max_temp,
+        w.avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind,
+        -- Tourism
+        t.tourists,
+        t.overnight_stays,
+        -- Derived
+        round(t.overnight_stays / nullif(t.tourists, 0), 2)  as avg_stay_days
+
+    from weather_by_province w
+    left join tourism_pivoted t
+        on w.province_name = t.province_name
+        and w.year = t.year
+        and w.month = t.month
+)
+
+select * from final
+  );
+  
+[0m10:26:28.920622 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:26:29.086769 [debug] [Thread-3 (]: SQL status: SELECT 4200 in 0.166 seconds
+[0m10:26:29.096923 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:26:29.097626 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism" rename to "mart_weather_tourism__dbt_backup"
+[0m10:26:29.099739 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m10:26:29.104706 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:26:29.105337 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp" rename to "mart_weather_tourism"
+[0m10:26:29.107270 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m10:26:29.109669 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:26:29.110291 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:26:29.110876 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:26:29.119020 [debug] [Thread-3 (]: SQL status: COMMIT in 0.007 seconds
+[0m10:26:29.122655 [debug] [Thread-3 (]: Applying DROP to: "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup"
+[0m10:26:29.127710 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:26:29.128348 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+drop table if exists "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup" cascade
+[0m10:26:29.135490 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.006 seconds
+[0m10:26:29.137592 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: Close
+[0m10:26:29.138503 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0d2b4321-9b8b-4354-8387-b3cd07ff2142', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E60B250>]}
+[0m10:26:29.139413 [info ] [Thread-3 (]: 3 of 3 OK created sql table model public.mart_weather_tourism .................. [[32mSELECT 4200[0m in 0.27s]
+[0m10:26:29.140819 [debug] [Thread-3 (]: Finished running node model.spain_weather.mart_weather_tourism
+[0m10:26:29.143226 [debug] [MainThread]: On master: COMMIT
+[0m10:26:29.143803 [debug] [MainThread]: Using postgres connection "master"
+[0m10:26:29.144307 [debug] [MainThread]: On master: COMMIT
+[0m10:26:29.144809 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:26:29.163775 [debug] [MainThread]: SQL status: COMMIT in 0.019 seconds
+[0m10:26:29.164408 [debug] [MainThread]: On master: Close
+[0m10:26:29.165164 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:26:29.165793 [debug] [MainThread]: Connection 'list_spain_weather_tourism' was properly closed.
+[0m10:26:29.166593 [debug] [MainThread]: Connection 'list_spain_weather_tourism_public' was properly closed.
+[0m10:26:29.167094 [debug] [MainThread]: Connection 'model.spain_weather.stg_aemet' was properly closed.
+[0m10:26:29.167547 [debug] [MainThread]: Connection 'model.spain_weather.stg_ine_tourism' was properly closed.
+[0m10:26:29.167971 [debug] [MainThread]: Connection 'model.spain_weather.mart_weather_tourism' was properly closed.
+[0m10:26:29.168563 [info ] [MainThread]: 
+[0m10:26:29.169292 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.85 seconds (0.85s).
+[0m10:26:29.171033 [debug] [MainThread]: Command end result
+[0m10:26:29.215431 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:26:29.219173 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:26:29.228906 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\run_results.json
+[0m10:26:29.229475 [info ] [MainThread]: 
+[0m10:26:29.230492 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:26:29.231183 [info ] [MainThread]: 
+[0m10:26:29.231835 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:26:29.233825 [debug] [MainThread]: Command `dbt run` succeeded at 10:26:29.233619 after 3.33 seconds
+[0m10:26:29.234474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351DC3A1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351E2431D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001351C5D8DE0>]}
+[0m10:26:29.235045 [debug] [MainThread]: Flushing usage events
+[0m10:26:30.220868 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:50:58.795344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139A9BB380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139BE03D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139BE039D0>]}
+
+
+============================== 10:50:58.802450 | d76a12c6-9e88-43a6-9fd7-cd5f9c377877 ==============================
+[0m10:50:58.802450 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:50:58.803677 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt seed --full-refresh', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\DataAnalyst\\spain-climate-tourism-pipeline\\dbt\\logs'}
+[0m10:50:59.217984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139B0FA060>]}
+[0m10:50:59.353144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000011398F25480>]}
+[0m10:50:59.355200 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:50:59.865573 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:51:00.171771 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m10:51:00.172721 [debug] [MainThread]: Partial parsing: updated file: spain_weather://seeds\province_mapping.csv
+[0m10:51:00.708684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139D72D150>]}
+[0m10:51:00.877571 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:51:00.881545 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:51:00.925296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139D4DFC50>]}
+[0m10:51:00.926069 [info ] [MainThread]: Found 3 models, 14 data tests, 1 seed, 3 sources, 464 macros
+[0m10:51:00.927075 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139D439010>]}
+[0m10:51:00.930269 [info ] [MainThread]: 
+[0m10:51:00.931011 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:51:00.931616 [info ] [MainThread]: 
+[0m10:51:00.932529 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:51:00.934107 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism'
+[0m10:51:01.102333 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism"
+[0m10:51:01.102950 [debug] [ThreadPool]: On list_spain_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:51:01.103435 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:01.132738 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.029 seconds
+[0m10:51:01.134725 [debug] [ThreadPool]: On list_spain_weather_tourism: Close
+[0m10:51:01.142092 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism_public'
+[0m10:51:01.151207 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism_public"
+[0m10:51:01.151825 [debug] [ThreadPool]: On list_spain_weather_tourism_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism_public"} */
+select
+      'spain_weather_tourism' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:51:01.152443 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:51:01.175503 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.023 seconds
+[0m10:51:01.177652 [debug] [ThreadPool]: On list_spain_weather_tourism_public: ROLLBACK
+[0m10:51:01.179676 [debug] [ThreadPool]: On list_spain_weather_tourism_public: Close
+[0m10:51:01.188337 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:01.189074 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:51:01.189688 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:51:01.213385 [debug] [MainThread]: SQL status: SELECT 2 in 0.024 seconds
+[0m10:51:01.216067 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139DB67380>]}
+[0m10:51:01.216728 [debug] [MainThread]: On master: ROLLBACK
+[0m10:51:01.218467 [debug] [MainThread]: On master: COMMIT
+[0m10:51:01.219210 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:01.219688 [debug] [MainThread]: On master: COMMIT
+[0m10:51:01.222402 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m10:51:01.222973 [debug] [MainThread]: On master: Close
+[0m10:51:01.230896 [debug] [Thread-1 (]: Began running node seed.spain_weather.province_mapping
+[0m10:51:01.231835 [info ] [Thread-1 (]: 1 of 1 START seed file public.province_mapping ................................. [RUN]
+[0m10:51:01.232836 [debug] [Thread-1 (]: Acquiring new postgres connection 'seed.spain_weather.province_mapping'
+[0m10:51:01.233419 [debug] [Thread-1 (]: Began compiling node seed.spain_weather.province_mapping
+[0m10:51:01.234026 [debug] [Thread-1 (]: Began executing node seed.spain_weather.province_mapping
+[0m10:51:01.288646 [debug] [Thread-1 (]: Applying DROP to: "spain_weather_tourism"."public"."province_mapping"
+[0m10:51:01.299835 [debug] [Thread-1 (]: Using postgres connection "seed.spain_weather.province_mapping"
+[0m10:51:01.300533 [debug] [Thread-1 (]: On seed.spain_weather.province_mapping: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "seed.spain_weather.province_mapping"} */
+drop table if exists "spain_weather_tourism"."public"."province_mapping" cascade
+[0m10:51:01.301110 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:51:01.322770 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.022 seconds
+[0m10:51:01.335924 [debug] [Thread-1 (]: Using postgres connection "seed.spain_weather.province_mapping"
+[0m10:51:01.336612 [debug] [Thread-1 (]: On seed.spain_weather.province_mapping: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "seed.spain_weather.province_mapping"} */
+
+    create table "spain_weather_tourism"."public"."province_mapping" ("province_id" integer,"province_name" text,"ccaa" text,"station_id" text,"station_name" text)
+  
+[0m10:51:01.348085 [debug] [Thread-1 (]: SQL status: CREATE TABLE in 0.011 seconds
+[0m10:51:01.436231 [debug] [Thread-1 (]: Using postgres connection "seed.spain_weather.province_mapping"
+[0m10:51:01.436983 [debug] [Thread-1 (]: On seed.spain_weather.province_mapping: 
+          insert into "spain_weather_tourism"."public"."province_mapping" ("province_id", "province_name", "ccaa", "station_id", "station_name") values
+          (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s...
+[0m10:51:01.440736 [debug] [Thread-1 (]: SQL status: INSERT 0 52 in 0.003 seconds
+[0m10:51:01.450319 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.spain_weather.province_mapping"
+[0m10:51:01.484456 [debug] [Thread-1 (]: On seed.spain_weather.province_mapping: COMMIT
+[0m10:51:01.485175 [debug] [Thread-1 (]: Using postgres connection "seed.spain_weather.province_mapping"
+[0m10:51:01.485777 [debug] [Thread-1 (]: On seed.spain_weather.province_mapping: COMMIT
+[0m10:51:01.491954 [debug] [Thread-1 (]: SQL status: COMMIT in 0.006 seconds
+[0m10:51:01.494774 [debug] [Thread-1 (]: On seed.spain_weather.province_mapping: Close
+[0m10:51:01.498330 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd76a12c6-9e88-43a6-9fd7-cd5f9c377877', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139DCB0A10>]}
+[0m10:51:01.499394 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file public.province_mapping ............................. [[32mCREATE 52[0m in 0.26s]
+[0m10:51:01.500959 [debug] [Thread-1 (]: Finished running node seed.spain_weather.province_mapping
+[0m10:51:01.503826 [debug] [MainThread]: On master: COMMIT
+[0m10:51:01.504428 [debug] [MainThread]: Using postgres connection "master"
+[0m10:51:01.504905 [debug] [MainThread]: On master: COMMIT
+[0m10:51:01.505365 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:51:01.534580 [debug] [MainThread]: SQL status: COMMIT in 0.029 seconds
+[0m10:51:01.535233 [debug] [MainThread]: On master: Close
+[0m10:51:01.535977 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:51:01.536454 [debug] [MainThread]: Connection 'list_spain_weather_tourism' was properly closed.
+[0m10:51:01.536887 [debug] [MainThread]: Connection 'list_spain_weather_tourism_public' was properly closed.
+[0m10:51:01.537314 [debug] [MainThread]: Connection 'seed.spain_weather.province_mapping' was properly closed.
+[0m10:51:01.537819 [info ] [MainThread]: 
+[0m10:51:01.538784 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 0.61 seconds (0.61s).
+[0m10:51:01.540192 [debug] [MainThread]: Command end result
+[0m10:51:01.584035 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:51:01.587728 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:51:01.597440 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\run_results.json
+[0m10:51:01.597997 [info ] [MainThread]: 
+[0m10:51:01.598726 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:51:01.599299 [info ] [MainThread]: 
+[0m10:51:01.599913 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m10:51:01.601627 [debug] [MainThread]: Command `dbt seed` succeeded at 10:51:01.601480 after 3.12 seconds
+[0m10:51:01.602198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139DA4B070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139DDA1770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001139DDA13B0>]}
+[0m10:51:01.602746 [debug] [MainThread]: Flushing usage events
+[0m10:51:02.536862 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:52:03.564680 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE8EE2B380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE90283D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE902839D0>]}
+
+
+============================== 10:52:03.571660 | ae4ade5f-3b5d-45fa-9d25-0669d31fc5de ==============================
+[0m10:52:03.571660 [info ] [MainThread]: Running with dbt=1.11.7
+[0m10:52:03.572613 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Francisco\\.dbt', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\DataAnalyst\\spain-climate-tourism-pipeline\\dbt\\logs'}
+[0m10:52:03.997519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE8F57A060>]}
+[0m10:52:04.134207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE8D395480>]}
+[0m10:52:04.136500 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m10:52:04.678661 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m10:52:04.990225 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:52:04.990824 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m10:52:04.991294 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:52:05.088093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE901EAA50>]}
+[0m10:52:05.262523 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:52:05.266697 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:52:05.310071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE900F3C50>]}
+[0m10:52:05.310905 [info ] [MainThread]: Found 3 models, 14 data tests, 1 seed, 3 sources, 464 macros
+[0m10:52:05.311838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE91A89FD0>]}
+[0m10:52:05.315460 [info ] [MainThread]: 
+[0m10:52:05.316222 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:52:05.316801 [info ] [MainThread]: 
+[0m10:52:05.317928 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:52:05.324492 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism'
+[0m10:52:05.572088 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism"
+[0m10:52:05.572689 [debug] [ThreadPool]: On list_spain_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:52:05.573175 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:05.603751 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.030 seconds
+[0m10:52:05.605751 [debug] [ThreadPool]: On list_spain_weather_tourism: Close
+[0m10:52:05.608414 [debug] [ThreadPool]: Acquiring new postgres connection 'list_spain_weather_tourism_public'
+[0m10:52:05.618048 [debug] [ThreadPool]: Using postgres connection "list_spain_weather_tourism_public"
+[0m10:52:05.618754 [debug] [ThreadPool]: On list_spain_weather_tourism_public: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "list_spain_weather_tourism_public"} */
+select
+      'spain_weather_tourism' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'spain_weather_tourism' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m10:52:05.619304 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:52:05.642499 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.023 seconds
+[0m10:52:05.644688 [debug] [ThreadPool]: On list_spain_weather_tourism_public: ROLLBACK
+[0m10:52:05.647097 [debug] [ThreadPool]: On list_spain_weather_tourism_public: Close
+[0m10:52:05.655814 [debug] [MainThread]: Using postgres connection "master"
+[0m10:52:05.656602 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:52:05.657260 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:52:05.681449 [debug] [MainThread]: SQL status: SELECT 2 in 0.024 seconds
+[0m10:52:05.684019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE9202CE20>]}
+[0m10:52:05.684672 [debug] [MainThread]: On master: ROLLBACK
+[0m10:52:05.686427 [debug] [MainThread]: On master: COMMIT
+[0m10:52:05.686932 [debug] [MainThread]: Using postgres connection "master"
+[0m10:52:05.687391 [debug] [MainThread]: On master: COMMIT
+[0m10:52:05.689798 [debug] [MainThread]: SQL status: COMMIT in 0.002 seconds
+[0m10:52:05.690315 [debug] [MainThread]: On master: Close
+[0m10:52:05.698273 [debug] [Thread-2 (]: Began running node model.spain_weather.stg_ine_tourism
+[0m10:52:05.699132 [debug] [Thread-1 (]: Began running node model.spain_weather.stg_aemet
+[0m10:52:05.700086 [info ] [Thread-2 (]: 2 of 3 START sql view model public.stg_ine_tourism ............................. [RUN]
+[0m10:52:05.701978 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.spain_weather.stg_ine_tourism'
+[0m10:52:05.700937 [info ] [Thread-1 (]: 1 of 3 START sql view model public.stg_aemet ................................... [RUN]
+[0m10:52:05.702803 [debug] [Thread-2 (]: Began compiling node model.spain_weather.stg_ine_tourism
+[0m10:52:05.703663 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.spain_weather.stg_aemet'
+[0m10:52:05.716508 [debug] [Thread-2 (]: Writing injected SQL for node "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.717311 [debug] [Thread-1 (]: Began compiling node model.spain_weather.stg_aemet
+[0m10:52:05.722159 [debug] [Thread-1 (]: Writing injected SQL for node "model.spain_weather.stg_aemet"
+[0m10:52:05.723298 [debug] [Thread-2 (]: Began executing node model.spain_weather.stg_ine_tourism
+[0m10:52:05.746901 [debug] [Thread-1 (]: Began executing node model.spain_weather.stg_aemet
+[0m10:52:05.802798 [debug] [Thread-1 (]: Writing runtime sql for node "model.spain_weather.stg_aemet"
+[0m10:52:05.804066 [debug] [Thread-2 (]: Writing runtime sql for node "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.806035 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:52:05.806843 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+
+  create view "spain_weather_tourism"."public"."stg_aemet__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_aemet_climate"
+),
+
+cleaned as (
+    select
+        indicativo                                    as station_id,
+        -- Split fecha "2023-9" into year and month
+        split_part(fecha, '-', 1)::int                as year,
+        split_part(fecha, '-', 2)::int                as month,
+        
+        -- Temperature
+        tm_mes::numeric                               as avg_temp,
+        tm_max::numeric                               as avg_max_temp,
+        tm_min::numeric                               as avg_min_temp,
+        
+        -- Precipitation and sunshine
+        p_mes::numeric                                as precipitation,
+        e::numeric                                    as sunshine_hours,
+        n_des::int                                    as sunny_days,
+        n_cub::int                                    as cloudy_days,
+        
+        -- Other
+        hr::numeric                                   as humidity,
+        w_med::numeric                                as avg_wind,
+        
+        extracted_at
+
+    from source
+    where
+        -- Remove annual summary rows (month 13)
+        split_part(fecha, '-', 2)::int between 1 and 12
+        -- Only 2019 onwards
+        and split_part(fecha, '-', 1)::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:52:05.807693 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.808338 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m10:52:05.809061 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+
+  create view "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp"
+    
+    
+  as (
+    with source as (
+    select * from "spain_weather_tourism"."public"."raw_ine_tourism"
+),
+
+cleaned as (
+    select
+        provincia                                          as province_name,
+        metric,
+        year::int                                          as year,
+        replace(month, 'M', '')::int                       as month,
+        value::numeric                                     as value,
+        extracted_at
+
+    from source
+    where
+        -- Remove null values marked as secret by INE
+        secret is null
+        and value is not null
+        -- Only 2019 onwards
+        and year::int >= 2019
+)
+
+select * from cleaned
+  );
+[0m10:52:05.809968 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:52:05.837154 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.027 seconds
+[0m10:52:05.838007 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.030 seconds
+[0m10:52:05.848794 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.854636 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:52:05.855392 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism" rename to "stg_ine_tourism__dbt_backup"
+[0m10:52:05.856118 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet" rename to "stg_aemet__dbt_backup"
+[0m10:52:05.858669 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:52:05.859403 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:52:05.864357 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.869794 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:52:05.870525 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+alter table "spain_weather_tourism"."public"."stg_ine_tourism__dbt_tmp" rename to "stg_ine_tourism"
+[0m10:52:05.871240 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+alter table "spain_weather_tourism"."public"."stg_aemet__dbt_tmp" rename to "stg_aemet"
+[0m10:52:05.873967 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:52:05.874775 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m10:52:05.904515 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:52:05.907154 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:52:05.908012 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.908817 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:52:05.909511 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: COMMIT
+[0m10:52:05.910198 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: COMMIT
+[0m10:52:05.915054 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m10:52:05.925092 [debug] [Thread-1 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_aemet__dbt_backup"
+[0m10:52:05.925871 [debug] [Thread-2 (]: SQL status: COMMIT in 0.015 seconds
+[0m10:52:05.935967 [debug] [Thread-1 (]: Using postgres connection "model.spain_weather.stg_aemet"
+[0m10:52:05.940254 [debug] [Thread-2 (]: Applying DROP to: "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup"
+[0m10:52:05.940976 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_aemet"} */
+drop view if exists "spain_weather_tourism"."public"."stg_aemet__dbt_backup" cascade
+[0m10:52:05.942201 [debug] [Thread-2 (]: Using postgres connection "model.spain_weather.stg_ine_tourism"
+[0m10:52:05.942987 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.stg_ine_tourism"} */
+drop view if exists "spain_weather_tourism"."public"."stg_ine_tourism__dbt_backup" cascade
+[0m10:52:05.948617 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.006 seconds
+[0m10:52:05.952387 [debug] [Thread-1 (]: On model.spain_weather.stg_aemet: Close
+[0m10:52:05.953143 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.009 seconds
+[0m10:52:05.955452 [debug] [Thread-2 (]: On model.spain_weather.stg_ine_tourism: Close
+[0m10:52:05.959567 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE917C7410>]}
+[0m10:52:05.960462 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE91DDA410>]}
+[0m10:52:05.961607 [info ] [Thread-1 (]: 1 of 3 OK created sql view model public.stg_aemet .............................. [[32mCREATE VIEW[0m in 0.25s]
+[0m10:52:05.964514 [debug] [Thread-1 (]: Finished running node model.spain_weather.stg_aemet
+[0m10:52:05.963080 [info ] [Thread-2 (]: 2 of 3 OK created sql view model public.stg_ine_tourism ........................ [[32mCREATE VIEW[0m in 0.26s]
+[0m10:52:05.965920 [debug] [Thread-2 (]: Finished running node model.spain_weather.stg_ine_tourism
+[0m10:52:05.966976 [debug] [Thread-3 (]: Began running node model.spain_weather.mart_weather_tourism
+[0m10:52:05.967864 [info ] [Thread-3 (]: 3 of 3 START sql table model public.mart_weather_tourism ....................... [RUN]
+[0m10:52:05.968988 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.spain_weather.mart_weather_tourism'
+[0m10:52:05.969733 [debug] [Thread-3 (]: Began compiling node model.spain_weather.mart_weather_tourism
+[0m10:52:05.977187 [debug] [Thread-3 (]: Writing injected SQL for node "model.spain_weather.mart_weather_tourism"
+[0m10:52:05.979419 [debug] [Thread-3 (]: Began executing node model.spain_weather.mart_weather_tourism
+[0m10:52:06.029461 [debug] [Thread-3 (]: Writing runtime sql for node "model.spain_weather.mart_weather_tourism"
+[0m10:52:06.031303 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:52:06.032137 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+
+  
+    
+
+  create  table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with weather as (
+    select * from "spain_weather_tourism"."public"."stg_aemet"
+),
+
+tourism as (
+    select * from "spain_weather_tourism"."public"."stg_ine_tourism"
+),
+
+provinces as (
+    select * from "spain_weather_tourism"."public"."province_mapping"
+),
+
+-- Join weather with province mapping to get province names
+weather_by_province as (
+    select
+        p.province_name,
+        p.ccaa,
+        w.year,
+        w.month,
+        -- Imputación de temperatura media
+        coalesce(
+            w.avg_temp, 
+            avg(w.avg_temp) over(partition by p.province_name, w.month)
+        ) as avg_temp,
+        -- Imputación de máximas y mínimas (opcional, pero recomendado para consistencia)
+        coalesce(w.avg_max_temp, avg(w.avg_max_temp) over(partition by p.province_name, w.month)) as avg_max_temp,
+        coalesce(w.avg_min_temp, avg(w.avg_min_temp) over(partition by p.province_name, w.month)) as avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind
+    from weather w
+    inner join provinces p
+        on w.station_id = p.station_id::text
+),
+
+-- Pivot tourism: one row per province/year/month with viajeros and pernoctaciones
+tourism_pivoted as (
+    select
+        province_name,
+        year,
+        month,
+        max(case when metric = 'viajeros' then value end)        as tourists,
+        max(case when metric = 'pernoctaciones' then value end)  as overnight_stays
+
+    from tourism
+    group by province_name, year, month
+),
+
+-- Final join
+final as (
+    select
+        w.province_name,
+        w.ccaa,
+        w.year,
+        w.month,
+        -- Weather
+        w.avg_temp,
+        w.avg_max_temp,
+        w.avg_min_temp,
+        w.precipitation,
+        w.sunshine_hours,
+        w.sunny_days,
+        w.cloudy_days,
+        w.humidity,
+        w.avg_wind,
+        -- Tourism
+        t.tourists,
+        t.overnight_stays,
+        -- Derived
+        round(t.overnight_stays / nullif(t.tourists, 0), 2)  as avg_stay_days
+
+    from weather_by_province w
+    left join tourism_pivoted t
+        on w.province_name = t.province_name
+        and w.year = t.year
+        and w.month = t.month
+)
+
+select * from final
+  );
+  
+[0m10:52:06.032953 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:52:06.227773 [debug] [Thread-3 (]: SQL status: SELECT 4368 in 0.195 seconds
+[0m10:52:06.239220 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:52:06.239981 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism" rename to "mart_weather_tourism__dbt_backup"
+[0m10:52:06.242482 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:52:06.248302 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:52:06.249063 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+alter table "spain_weather_tourism"."public"."mart_weather_tourism__dbt_tmp" rename to "mart_weather_tourism"
+[0m10:52:06.251364 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m10:52:06.253985 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:52:06.254681 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:52:06.255294 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: COMMIT
+[0m10:52:06.263603 [debug] [Thread-3 (]: SQL status: COMMIT in 0.008 seconds
+[0m10:52:06.268367 [debug] [Thread-3 (]: Applying DROP to: "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup"
+[0m10:52:06.274522 [debug] [Thread-3 (]: Using postgres connection "model.spain_weather.mart_weather_tourism"
+[0m10:52:06.275236 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "spain_weather", "target_name": "dev", "node_id": "model.spain_weather.mart_weather_tourism"} */
+drop table if exists "spain_weather_tourism"."public"."mart_weather_tourism__dbt_backup" cascade
+[0m10:52:06.284745 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.009 seconds
+[0m10:52:06.287270 [debug] [Thread-3 (]: On model.spain_weather.mart_weather_tourism: Close
+[0m10:52:06.288333 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae4ade5f-3b5d-45fa-9d25-0669d31fc5de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE918C4230>]}
+[0m10:52:06.289436 [info ] [Thread-3 (]: 3 of 3 OK created sql table model public.mart_weather_tourism .................. [[32mSELECT 4368[0m in 0.32s]
+[0m10:52:06.290807 [debug] [Thread-3 (]: Finished running node model.spain_weather.mart_weather_tourism
+[0m10:52:06.293597 [debug] [MainThread]: On master: COMMIT
+[0m10:52:06.294411 [debug] [MainThread]: Using postgres connection "master"
+[0m10:52:06.294979 [debug] [MainThread]: On master: COMMIT
+[0m10:52:06.295448 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:52:06.318769 [debug] [MainThread]: SQL status: COMMIT in 0.023 seconds
+[0m10:52:06.319564 [debug] [MainThread]: On master: Close
+[0m10:52:06.320530 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:52:06.321166 [debug] [MainThread]: Connection 'list_spain_weather_tourism' was properly closed.
+[0m10:52:06.321643 [debug] [MainThread]: Connection 'list_spain_weather_tourism_public' was properly closed.
+[0m10:52:06.322352 [debug] [MainThread]: Connection 'model.spain_weather.stg_ine_tourism' was properly closed.
+[0m10:52:06.322831 [debug] [MainThread]: Connection 'model.spain_weather.stg_aemet' was properly closed.
+[0m10:52:06.323442 [debug] [MainThread]: Connection 'model.spain_weather.mart_weather_tourism' was properly closed.
+[0m10:52:06.324280 [info ] [MainThread]: 
+[0m10:52:06.325030 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 1.01 seconds (1.01s).
+[0m10:52:06.327430 [debug] [MainThread]: Command end result
+[0m10:52:06.389415 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\manifest.json
+[0m10:52:06.394158 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\semantic_manifest.json
+[0m10:52:06.408551 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DataAnalyst\spain-climate-tourism-pipeline\dbt\target\run_results.json
+[0m10:52:06.409290 [info ] [MainThread]: 
+[0m10:52:06.410160 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:52:06.411093 [info ] [MainThread]: 
+[0m10:52:06.412085 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m10:52:06.414977 [debug] [MainThread]: Command `dbt run` succeeded at 10:52:06.414694 after 3.17 seconds
+[0m10:52:06.415863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE8F52DDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE8F52EED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CE89A19A90>]}
+[0m10:52:06.416671 [debug] [MainThread]: Flushing usage events
+[0m10:52:07.483800 [debug] [MainThread]: An error was encountered while trying to flush usage events
