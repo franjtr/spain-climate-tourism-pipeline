@@ -21,9 +21,6 @@ dbt/logs/
 # Logs
 logs/
 
-# Export script (not needed in production)
-export_data.py
-
 # OS
 .DS_Store
 Thumbs.db

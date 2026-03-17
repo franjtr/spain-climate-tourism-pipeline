@@ -235,11 +235,19 @@ with tab2:
             fig_ts.update_layout(height=800, showlegend=False, hovermode="x unified")
             
             st.plotly_chart(fig_ts, width="stretch")
+
+            st.info("""
+            **💡Insight: The Pre-Covid Positive Spike around February 2020** 
+                    
+            You might notice a huge **positive** spike in Residuals just before the COVID-19 crash (Feb 2020). 
+            This is a known mathematical artifact of the STL algorithm. Because STL calculates the *Trend* using rolling windows that look forward and backward, the massive drop in March/April 2020 artificially drag down the Trend line before them. 
+            Since the actual toursim numbers before Covid were normal, the model interprets normal numbers against a crashed trend as a massive "positive anomaly"!
+            """)
             
             
             # INSIGHTS 
             st.divider()
-            st.subheader("🔍 Key Insights")
+            st.subheader("Key Insights")
             
             # Metrics
             observed_by_month = ts_data.groupby(ts_data.index.month).mean()
