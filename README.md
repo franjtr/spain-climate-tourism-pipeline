@@ -27,7 +27,7 @@ This project extracts, transforms, and visualizes tourism and weather data from 
 
 By analyzing data from 52 provinces over 7 years (2019-2025), this pipeline reveals regional patterns, seasonal behaviors, and unexpected correlations.
 
-## 📊 Key Insights
+## Key Insights
 
 - **Thermal Correlation**: Temperature correlates strongly with tourism in coastal provinces ($r > 0.7$), while inland cities like Madrid or Córdoba show much lower weather dependency.
 - **Structural Breaks**: The COVID-19 impact is clearly visible in 2020 as a significant anomaly that disrupted historical trends across all regions.
