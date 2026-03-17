@@ -4,7 +4,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from statsmodels.tsa.seasonal import STL
-import sys
 from pathlib import Path
 
 # Page configuration
@@ -28,13 +27,26 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Data loading
-sys.path.append(str(Path(__file__).parent.parent))
-from ingestion.utils import get_db_engine  
+# Try database connection (local development)
+# Falls back to parquet (Streamlit Cloud)
+try:
+    import sys
+    sys.path.append(str(Path(__file__).parent.parent))
+    from ingestion.utils import get_db_engine
+    USE_DB = True
+except ImportError:
+    USE_DB = False
 
 @st.cache_data
 def load_data():
-    engine = get_db_engine()
-    df = pd.read_sql("SELECT * FROM mart_weather_tourism", engine)
+    if USE_DB:
+        # Local: use PostgreSQL
+        engine = get_db_engine()
+        df = pd.read_sql("SELECT * FROM mart_weather_tourism", engine)
+    else:
+        # Streamlit Cloud: use parquet
+        data_path = Path(__file__).parent / "mart_weather_tourism.parquet"
+        df = pd.read_parquet(data_path)
     
     if 'date' not in df.columns:
         df["date"] = pd.to_datetime(df[["year", "month"]].assign(day=1))

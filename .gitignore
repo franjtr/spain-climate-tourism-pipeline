@@ -1,6 +1,32 @@
+# Secrets
 .env
+
+# Data raw files
 data/
+
+# Python cache
 __pycache__/
 *.pyc
-.dbt/
+*.pyo
+
+# Virtual environment
 venv/
+.venv/
+
+# dbt artifacts
+.dbt/
+dbt/target/
+dbt/logs/
+
+# Logs
+logs/
+
+# Export script (not needed in production)
+export_data.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
