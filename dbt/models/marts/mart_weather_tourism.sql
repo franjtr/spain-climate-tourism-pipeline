@@ -17,12 +17,12 @@ weather_by_province as (
         p.ccaa,
         w.year,
         w.month,
-        -- Imputación de temperatura media
+        -- Mean imputation for temperature
         coalesce(
             w.avg_temp, 
             avg(w.avg_temp) over(partition by p.province_name, w.month)
         ) as avg_temp,
-        -- Imputación de máximas y mínimas (opcional, pero recomendado para consistencia)
+        -- Imputation for max and min average temperature
         coalesce(w.avg_max_temp, avg(w.avg_max_temp) over(partition by p.province_name, w.month)) as avg_max_temp,
         coalesce(w.avg_min_temp, avg(w.avg_min_temp) over(partition by p.province_name, w.month)) as avg_min_temp,
         w.precipitation,
@@ -56,7 +56,6 @@ final as (
         w.ccaa,
         w.year,
         w.month,
-        -- Weather
         w.avg_temp,
         w.avg_max_temp,
         w.avg_min_temp,
@@ -66,10 +65,8 @@ final as (
         w.cloudy_days,
         w.humidity,
         w.avg_wind,
-        -- Tourism
         t.tourists,
         t.overnight_stays,
-        -- Derived
         round(t.overnight_stays / nullif(t.tourists, 0), 2)  as avg_stay_days
 
     from weather_by_province w

@@ -38,13 +38,3 @@ def load_ine() -> None:
     else:
         print("No INE data to load.")
 
-if __name__ == "__main__":
-    # Test with 3 stations for now
-    stations = ["3195", "8414A", "2867"]
-    
-    load_aemet(2023, stations)
-    load_ine()
-    
-    print("\nDone. Check your database:")
-    print("  Table: raw_aemet_climate")
-    print("  Table: raw_ine_tourism")

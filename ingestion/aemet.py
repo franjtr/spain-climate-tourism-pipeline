@@ -73,8 +73,3 @@ def fetch_all_stations(year: int, stations: list) -> pd.DataFrame:
     
     return pd.concat(all_frames, ignore_index=True)
 
-if __name__ == "__main__":
-    stations = ["3195", "8414A", "2867"]  
-    df = fetch_all_stations(2023, stations)
-    print(df.head())
-    print(f"Total rows downloaded: {len(df)}")

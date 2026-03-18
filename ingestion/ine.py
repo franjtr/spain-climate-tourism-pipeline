@@ -73,9 +73,3 @@ def fetch_hotel_occupancy() -> pd.DataFrame:
     print(f"Total rows downloaded: {len(df)}")
     return df
 
-if __name__ == "__main__":
-    df = fetch_hotel_occupancy()
-    print(df.head(10))
-    print(f"\nUnique series: {df['serie_name'].nunique()}")
-    print(f"\nSample series names:")
-    print(df['serie_name'].unique()[:5])
